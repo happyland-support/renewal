@@ -1,15 +1,33 @@
 /* template */
+:root {
+  /* --main_color: #58c6de;
+  --sub_color: #ff6e76;
+  --sub_button_color: #3ab9d4;
+  --main_title_color: #5ac1d0;
+  --sub_title_color: #dc5c63;
+  --hl_title_back: #99ebf7;
+  --footer_bg_color: #f3e8d9;
+  --footer_text_color: rgba(128, 106, 74, .75);
+  --notice_txt_color:  #d2404d; */
+  --base_color: #4db4cb;
+  --base_dark_color: #429baf;
+  --main_button_color: #ff6f76;
+  --main_button_shadow_color: #cc595f;
+  --footer_bg_color: #f3e8d9;
+  --footer_text_color: rgba(128, 106, 74, .75);
+}
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
-h1 {
-  margin: 0;
-}
-
+h1,
+h2,
+h3,
 p {
   margin: 0;
 }
@@ -25,13 +43,109 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  /* outline: 1px solid red; */
+  width: calc(100% - 24px);
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+/* 各種パーツ tabs */
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.tabs_left,
+.tabs_right {
+  width: 49%;
+  padding: 8px 0;
+  background-color: #ccc;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.tabs_left:hover,
+.tabs_right:hover {
+  opacity: .7;
+}
+
+.tabs_left::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--base_color);
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  transform: translate(-50%, 100%);
+}
+
+.tabs_left.active {
+  background-color: var(--base_color);
+  color: #fff;
+}
+
+/* 各種パーツ select_btn */
+
+.select {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  padding: 5px 24px 5px 5px;
+  position: relative;
+}
+
+.select select {
+  padding: 5px 24px 5px 5px;
+  color: #5a5a5a;
+  width: 100%;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  vertical-align: baseline;
+}
+
+.select::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #5a5a5a;
+  pointer-events: none;
+  transform: translate(-65%, -50%);
 }
 
 /* header */
 
 .header-name {
   padding: 8px 12px;
-  background-color: #4db4cb;
+  background-color: var(--base_color);
   display: flex;
   align-items: center;
   color: #fff;
@@ -46,6 +160,10 @@ a {
 }
 
 /* header nav */
+
+.top-menu {
+  background-color: #fff;
+}
 
 .top-menu ul {
   display: flex;
@@ -107,7 +225,7 @@ a {
   right: -100%;
   width: 70%;
   height: 100%;
-  background-color: #4db4cb;
+  background-color: var(--base_color);
   color: #fff;
   transition: all .6s;
   z-index: 1;
@@ -119,7 +237,7 @@ a {
 
 .overlay-menu h1 {
   padding: 12px 24px;
-  background-color: #429baf;
+  background-color: var(--base_dark_color);
   font-size: 18px;
 }
 
@@ -179,25 +297,16 @@ a {
   transition-delay: .50s;
 }
 
-/* main-area */
-
-.container {
-  /* outline: 1px solid red; */
-  width: calc(100% - 32px);
-  max-width: 600px;
-  margin: 24px auto;
-}
-
 /* footer */
 
 footer {
-  background-color: #f3e8d9;
+  background-color: var(--footer_bg_color);
 }
 
 footer nav li a {
   padding: .5em 5%;
-  background-color: #f3e8d9;
-  color: rgba(128, 106, 74, .75);
+  background-color: var(--footer_bg_color);
+  color: var(--footer_text_color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -213,7 +322,7 @@ footer .tel {
   margin: 1.25em auto;
   padding: .65em 0.4em;
   background-color: #fff;
-  border: 1px solid rgba(128, 106, 74, .75);
+  border: 1px solid var(--footer_text_color);
   border-radius: 4px;
   font-size: 14px;
   line-height: 1.5;
@@ -231,7 +340,7 @@ footer small {
   display: block;
   padding: 24px 0;
   font-size: 12px;
-  color: rgba(128, 106, 74, .75);
+  color: var(--footer_text_color);
   text-align: center;
 }
 
@@ -239,6 +348,7 @@ footer small {
 
 .search li {
   padding: 12px 0;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   color: #666;
@@ -260,4 +370,125 @@ footer small {
   margin-top: 12px;
 }
 
-/* 検索結果ページ */
+/* search-result (検索結果ページ) */
+
+.search-result {
+  
+}
+
+/* mail (メッセージページ) */
+
+.mail h3 {
+  color: #aaa;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.mail li {
+  padding: 12px 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #666;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.mail li:hover {
+  background-color: #eee;
+}
+
+.mail ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mail i {
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+.mail li + li {
+  margin-top: 12px;
+}
+
+.mail .container div + div {
+  margin-top: 16px;
+}
+
+/* payment (ポイント購入・履歴ページ) */
+
+.payment section {
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.payment section h2 {
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+.payment section .pic {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.payment section p {
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.payment .select {
+  margin: 12px auto 0;
+}
+
+.text_center,
+.btn_center {
+  text-align: center;
+}
+
+.payment button {
+  all: unset;
+  margin-top: 12px;
+  width: 40%;
+  padding: 6px 0;
+  background-color: var(--main_button_color);
+  border-radius: 4px;
+  box-shadow: 0 2px 0 var(--main_button_shadow_color);
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.payment button:hover {
+  opacity: .8;
+}
+
+.payment .text {
+  text-align: center;
+}
+
+.payment input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  position: relative;
+}
+
+.payment input[type="text"]:focus {
+  box-shadow: 0 0 4px 0 var(--footer_text_color);
+  border: 1px solid #fff;
+  outline: 0;
+}
+
+.payment section + section {
+  margin-top: 16px;
+}
