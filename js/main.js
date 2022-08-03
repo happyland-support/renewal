@@ -3,7 +3,7 @@
   const openMenu = document.getElementById('open-menu');
   const mask = document.getElementById('mask');
 
-  const overlayMenu = document.querySelector('.overlay-menu');
+  const overlayMenu = document.querySelector('.overlay_menu');
 
   openMenu.addEventListener('click', () => {
     mask.classList.add('show');
