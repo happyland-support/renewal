@@ -18,13 +18,8 @@
   --footer_text_color: rgba(128, 106, 74, .75);
 }
 
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   background-color: #f7f7f7;
@@ -688,18 +683,19 @@ footer small {
 /* sitemail (サイトメールページ) */
 
 .sitemail {
-  height: 100%;
   background-color: #d5dde7;
-  display: flex;
-  flex-direction: column;
 }
 
 .sitemail h1 {
+  position: fixed;
+  width: 100%;
   padding: 8px 12px;
   background-color: var(--footer_bg_color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
   color: #302825;
   font-size: 16px;
   font-weight: normal;
+  z-index: 1;
 }
 
 .sitemail h1 i {
@@ -707,7 +703,7 @@ footer small {
 }
 
 .sitemail ul {
-  padding: 12px;
+  padding: 56px 12px;
   flex: 1;
 }
 
@@ -736,32 +732,19 @@ footer small {
 
 .sitemail li.box_left p {
   position: relative;
-  width: 70%;
-  padding: 10px 10px 25px;
+  width: 60%;
+  padding: 10px;
   border-radius: 8px;
   background-color: #fff;
 }
 
 .sitemail li.box_right p {
   position: relative;
-  width: 70%;
-  padding: 10px 10px 25px;
+  width: 60%;
+  padding: 10px;
   border-radius: 8px;
   background-color: var(--footer_bg_color);
   color: #302825;
-}
-
-.sitemail li.box_right p::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  right: -10px;
-  top: 1em;
-  border-left: 10px solid var(--footer_bg_color);
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
 }
 
 .sitemail li.box_left p::before {
@@ -777,22 +760,57 @@ footer small {
   border-bottom: 7px solid transparent;
 }
 
+.sitemail li.box_right p::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -10px;
+  top: 1em;
+  border-left: 10px solid var(--footer_bg_color);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.sitemail .sitemail_image {
+  width: 100%;
+  border-radius: 8px;
+  vertical-align: bottom;
+}
+
+.sitemail li p.no_padding {
+  padding: 0;
+}
+
 .sitemail .profile_img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
 }
 
-.sitemail span.sitemailBox_info {
+.sitemail .box_left p span.sitemailBox_info {
   display: block;
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  right: 10px;
+  right: -68px;
+  bottom: 5px;
+}
+
+.sitemail .box_right p span.sitemailBox_info {
+  display: block;
+  margin-top: 7px;
+  font-size: .8em;
+  position: absolute;
+  left: -68px;
   bottom: 5px;
 }
 
 .sitemail form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   padding: 12px 0;
   background-color: var(--footer_bg_color);
   display: flex;
