@@ -12,12 +12,19 @@
   --base_dark_color: #429baf;
   --main_button_color: #ff6f76;
   --main_button_shadow_color: #cc595f;
+  --gray_button_color: #ccc;
+  --gray_button_shadow_color: #aaa;
   --footer_bg_color: #f3e8d9;
   --footer_text_color: rgba(128, 106, 74, .75);
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   background-color: #f7f7f7;
@@ -74,6 +81,10 @@ a {
   border-bottom: 1px solid #ccc;
 }
 
+.base_section_style + .base_section_style {
+  margin-top: 16px;
+}
+
 /* 各種パーツ main_btn */
 
 .main_btn {
@@ -94,7 +105,27 @@ a {
   opacity: .8;
 }
 
-/* 各種パーツ tabs */
+/* 各種パーツ gray_btn */
+
+.gray_btn {
+  all: unset;
+  margin-top: 12px;
+  width: 40%;
+  padding: 6px 0;
+  background-color: var(--gray_button_color);
+  border-radius: 4px;
+  box-shadow: 0 2px 0 var(--gray_button_shadow_color);
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.gray_btn:hover {
+  opacity: .8;
+}
+
+/* 各種パーツ タブメニュー tabs */
 
 .tabs {
   display: flex;
@@ -102,9 +133,14 @@ a {
   margin-bottom: 18px;
 }
 
+.tabs li {
+  width: 100%;
+}
+
 .tabs_left,
 .tabs_right {
-  width: 49%;
+  display: block;
+  width: 99%;
   padding: 8px 0;
   background-color: #ccc;
   font-size: 14px;
@@ -114,12 +150,13 @@ a {
   position: relative;
 }
 
-.tabs_left:hover,
-.tabs_right:hover {
+.tabs_left:not(.active):hover,
+.tabs_right:not(.active):hover {
   opacity: .7;
 }
 
-.tabs_left::before {
+.tabs_left.active::before,
+.tabs_right.active::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -132,7 +169,8 @@ a {
   transform: translate(-50%, 100%);
 }
 
-.tabs_left.active {
+.tabs_left.active,
+.tabs_right.active {
   background-color: var(--base_color);
   color: #fff;
 }
@@ -216,6 +254,60 @@ a {
 
 .base_list_style li + li {
   margin-top: 12px;
+}
+
+/* 各種パーツ search_form */
+
+.search_form * {
+  box-sizing: border-box;
+}
+
+.search_form {
+  width: 100%;
+}
+
+.search_form tr {
+  display: flex;
+  align-items: center;
+}
+
+.search_form tr + tr {
+  margin-top: 12px;
+}
+
+.search_form th {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.search_form td {
+  margin-left: auto;
+}
+
+.search_form .custom_select {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search_form .custom_select select {
+  all: unset;
+  padding: .4em 1.8em .4em .4em;
+}
+
+.search_form .custom_select::after{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  top: 30%;
+  right: 9%;
+  border-bottom: #aaa 2px solid;
+  border-right: #aaa 2px solid;
+  transform: rotate(45deg) translateY(-30%);
 }
 
 /* header */
@@ -450,10 +542,6 @@ footer small {
 
 /* search-result (検索結果ページ) */
 
-.search-result {
-  
-}
-
 /* mail (メッセージページ) */
 
 .mail h3 {
@@ -467,10 +555,68 @@ footer small {
   margin-top: 16px;
 }
 
-/* autointro (ポイント購入・履歴ページ) */
+/* diary (日記結果ページ) */
 
-.autointro {
+.diary article {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background-color: #fff;
+}
 
+.diary article > img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.diary article h1 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.diary article time {
+  margin-left: 12px;
+  font-size: 16px;
+  color: #aaa;
+  font-weight: normal;
+}
+
+.diary article ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.diary article li {
+  padding: 4px 12px;
+  border: 1px solid #aaa;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.diary article li:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+.diary article li + li {
+  margin-left: 8px;
+}
+
+.diary_img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.diary article i {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.diary article + article {
+  border-top: 1px solid #ccc;
 }
 
 /* payment (ポイント購入・履歴ページ) */
@@ -509,6 +655,156 @@ footer small {
   outline: 0;
 }
 
-.payment section + section {
-  margin-top: 16px;
+.payment .point {
+  display: none;
+}
+
+.payment .point.active {
+  display: block;
+}
+
+.point_history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: #fff;
+}
+
+.point_history th {
+  border: 1px solid #aaa;
+  background: #ccc;
+  color: #fff;
+}
+
+.point_history td {
+  /* border: 1px solid #ccc; */
+  padding: 8px;
+}
+
+.point_history tbody tr td:nth-child(3) {
+  text-align: center;
+}
+
+/* sitemail (サイトメールページ) */
+
+.sitemail {
+  height: 100%;
+  background-color: #d5dde7;
+  display: flex;
+  flex-direction: column;
+}
+
+.sitemail h1 {
+  padding: 8px 12px;
+  background-color: var(--footer_bg_color);
+  color: #302825;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.sitemail h1 i {
+  margin-right: 4px;
+}
+
+.sitemail ul {
+  padding: 12px;
+  flex: 1;
+}
+
+.sitemail li {
+  display: flex;
+  gap: 10px;
+}
+
+.sitemail li + li {
+  margin-top: 10px;
+}
+
+.sitemail .caution {
+  width: 50%;
+  padding: 8px;
+  margin: 16px auto;
+  background: #ff3333;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.sitemail li.box_right {
+  flex-direction: row-reverse;
+}
+
+.sitemail li.box_left p {
+  position: relative;
+  width: 70%;
+  padding: 10px 10px 25px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.sitemail li.box_right p {
+  position: relative;
+  width: 70%;
+  padding: 10px 10px 25px;
+  border-radius: 8px;
+  background-color: var(--footer_bg_color);
+  color: #302825;
+}
+
+.sitemail li.box_right p::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -10px;
+  top: 1em;
+  border-left: 10px solid var(--footer_bg_color);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.sitemail li.box_left p::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 1em;
+  border-right: 10px solid #fff;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.sitemail .profile_img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.sitemail span.sitemailBox_info {
+  display: block;
+  margin-top: 7px;
+  font-size: .8em;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+
+.sitemail form {
+  padding: 12px 0;
+  background-color: var(--footer_bg_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.sitemail input {
+  width: 70%;
+  height: 24px;
+  padding: 4px;
+  border: 1px solid #99857d;
+  border-radius: 8px;
 }

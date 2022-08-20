@@ -40,13 +40,13 @@
         </a>
       </li>
       <li>
-        <a href="circle">
+        <a href="circle.html">
           <i class="bi bi-people"></i>
           <span>サークル</span>
         </a>
       </li>
       <li>
-        <a href="diary">
+        <a href="diary.html">
           <i class="bi bi-calendar3"></i>
           <span>日記</span>
         </a>
@@ -69,19 +69,19 @@
         <a href="profile.html">プロフィール</a>
       </li>
       <li>
-        <a href="setting.html">各種設定</a>
+        <a href="favorite.html">お気に入り</a>
       </li>
       <li>
-        <a href="favorite.html">お気に入り</a>
+        <a href="setting.html">各種設定</a>
       </li>
       <li>
         <a href="autointro.html">お相手自動紹介</a>
       </li>
       <li>
-        <a href="age.html">年齢認証</a>
+        <a href="payment.html">ポイント購入</a>
       </li>
       <li>
-        <a href="payment.html">ポイント購入</a>
+        <a href="pointget.html">ポイントゲット</a>
       </li>
       <li>
         <a href="system.html">システム・料金案内</a>
@@ -101,42 +101,66 @@
   <div class="container">
     <section class="base_section_style">
       <h2>お相手自動紹介</h2>
-      <p>現在、下記の条件で設定されています。</p>
-      <table>
+      <!-- <p>現在、下記の条件で設定されています。</p> -->
+      <table class="search_form">
         <tbody>
           <tr>
             <th>居住地</th>
             <td>
-              <select name="" id="">
-                <option value="">北海道・東北</option>
-              </select>
+              <div class="custom_select">
+                <select name="" id="">
+                  <option value="">北海道・東北</option>
+                  <option value="">東京・神奈川</option>
+                  <option value="">関東・甲信越</option>
+                  <option value="">東海・北陸</option>
+                  <option value="">近畿</option>
+                  <option value="">中・四国</option>
+                  <option value="">九州・沖縄</option>
+                  <option value="">海外</option>
+                </select>
+              </div>
             </td>
           </tr>
           <tr>
             <th>年齢</th>
             <td>
-              <select name="" id="">
-                <option value="">10代</option>
-                <option value="">80代以上</option>
-              </select>
+              <div class="custom_select">
+                <select name="" id="">
+                  <option value="">10代</option>
+                  <option value="">80代以上</option>
+                </select>
+              </div>
+              ～
+              <div class="custom_select">
+                <select name="" id="">
+                  <option value="">10代</option>
+                  <option value="">80代以上</option>
+                </select>
+              </div>
             </td>
           </tr>
           <tr>
             <th>最終学歴</th>
             <td>
-              <select name="" id="">
-                <option value="">こだわらない</option>
-              </select>
+              <div class="custom_select">
+                <select name="" id="">
+                  <option value="">こだわらない</option>
+                </select>
+              </div>
             </td>
           </tr>
         </tbody>
       </table>
       <div class="btn_center">
-        <button class="main_btn">この条件で設定する</button>
+        <button class="main_btn">この条件で設定</button>
       </div>
     </section>
-    <h2>設定解除</h2>
-    <button>設定を取り消す</button>
+    <section class="base_section_style">      
+      <h2>設定解除</h2>
+      <div class="btn_center">
+        <button class="gray_btn">設定を取り消す</button>
+      </div>
+    </section>
   </div>
 </section>
 
@@ -180,14 +204,14 @@
         </a>
       </li>
       <li>
-        <a href="setting.html">
-          <span>各種設定</span>
+        <a href="favorite.html">
+          <span>お気に入り</span>
           <i class="bi bi-chevron-right"></i>
         </a>
       </li>
       <li>
-        <a href="favorite.html">
-          <span>お気に入り</span>
+        <a href="setting.html">
+          <span>各種設定</span>
           <i class="bi bi-chevron-right"></i>
         </a>
       </li>
@@ -198,14 +222,14 @@
         </a>
       </li>
       <li>
-        <a href="age.html">
-          <span>年齢認証</span>
+        <a href="payment.html">
+          <span>ポイント購入</span>
           <i class="bi bi-chevron-right"></i>
         </a>
       </li>
       <li>
-        <a href="payment.html">
-          <span>ポイント購入</span>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
           <i class="bi bi-chevron-right"></i>
         </a>
       </li>
