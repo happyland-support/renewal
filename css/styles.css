@@ -91,6 +91,7 @@ a {
   border-radius: 4px;
   box-shadow: 0 2px 0 var(--main_button_shadow_color);
   color: #fff;
+  font-weight: bold;
   text-align: center;
   cursor: pointer;
   transition: opacity .3s;
@@ -111,6 +112,7 @@ a {
   border-radius: 4px;
   box-shadow: 0 2px 0 var(--gray_button_shadow_color);
   color: #fff;
+  font-weight: bold;
   text-align: center;
   cursor: pointer;
   transition: opacity .3s;
@@ -174,45 +176,35 @@ a {
 
 .select {
   all: unset;
+  margin: 0 auto;
   box-sizing: border-box;
   display: block;
   width: 100%;
-  max-width: 300px;
-  border: 1px solid #5a5a5a;
+  border: 1px solid #aaa;
   border-radius: 4px;
-  padding: 5px 24px 5px 5px;
   position: relative;
 }
 
 .select select {
-  padding: 5px 24px 5px 5px;
+  all: unset;
+  box-sizing: border-box;
+  padding: .6em 1.8em .6em .6em;
   color: #5a5a5a;
   width: 100%;
   cursor: pointer;
-  text-indent: 0.01px;
-  text-overflow: ellipsis;
-  border: none;
-  outline: none;
-  background: transparent;
-  background-image: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  vertical-align: baseline;
 }
 
-.select::before {
+.select::after {
   position: absolute;
-  top: 50%;
-  right: 0;
-  width: 0;
-  height: 0;
-  padding: 0;
-  content: '';
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #5a5a5a;
-  pointer-events: none;
-  transform: translate(-65%, -50%);
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  top: 30%;
+  right: 12px;
+  border-bottom: #aaa 2px solid;
+  border-right: #aaa 2px solid;
+  transform: rotate(45deg) translateY(-30%);
 }
 
 /* 各種パーツ base_list_style */
@@ -271,7 +263,7 @@ a {
 }
 
 .search_form th {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -279,7 +271,7 @@ a {
   margin-left: auto;
 }
 
-.search_form .custom_select {
+.search_form .table_select {
   display: inline-block;
   position: relative;
   border: 1px solid #aaa;
@@ -287,12 +279,12 @@ a {
   cursor: pointer;
 }
 
-.search_form .custom_select select {
+.search_form .table_select select {
   all: unset;
   padding: .4em 1.8em .4em .4em;
 }
 
-.search_form .custom_select::after{
+.search_form .table_select::after{
   position: absolute;
   content: "";
   display: block;
@@ -303,6 +295,24 @@ a {
   border-bottom: #aaa 2px solid;
   border-right: #aaa 2px solid;
   transform: rotate(45deg) translateY(-30%);
+}
+
+/* 各種パーツ receive_message */
+
+.receive_message h1,
+.send_message h1 {
+  margin-top: 12px;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.receive_message p {
+  padding: 8px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #666;
 }
 
 /* header */
@@ -512,7 +522,6 @@ footer small {
 /* search (検索ページ) */
 
 .search li {
-  padding: 12px 0;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -524,6 +533,11 @@ footer small {
 
 .search li:hover {
   background-color: #eee;
+}
+
+.search li a {
+  display: block;
+  padding: 12px 0;
 }
 
 .search i {
@@ -561,8 +575,8 @@ footer small {
 
 .diary article > img {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
 }
 
 .diary article h1 {
@@ -616,6 +630,11 @@ footer small {
 
 /* payment (ポイント購入・履歴ページ) */
 
+.payment .remaining_point {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .payment section .pic {
   padding: 16px 0;
   text-align: center;
@@ -627,6 +646,7 @@ footer small {
 }
 
 .payment .select {
+  max-width: 300px;
   margin: 12px auto 0;
 }
 
@@ -660,9 +680,14 @@ footer small {
 
 .point_history {
   width: 100%;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   margin-top: 12px;
   background-color: #fff;
+}
+
+.point_history thead th {
+  border-radius: 4px;
+  font-weight: normal;
 }
 
 .point_history th {
@@ -672,7 +697,6 @@ footer small {
 }
 
 .point_history td {
-  /* border: 1px solid #ccc; */
   padding: 8px;
 }
 
@@ -704,7 +728,6 @@ footer small {
 
 .sitemail ul {
   padding: 56px 12px;
-  flex: 1;
 }
 
 .sitemail li {
@@ -824,5 +847,23 @@ footer small {
   height: 24px;
   padding: 4px;
   border: 1px solid #99857d;
+  border-radius: 8px;
+}
+
+/* communicate01 交際申込み */
+
+.communicate form {
+  width: 100%;
+}
+
+.communicate .select {
+  margin-top: 8px;
+}
+
+.communicate textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
   border-radius: 8px;
 }
