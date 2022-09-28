@@ -50,7 +50,7 @@ a {
 .container {
   /* outline: 1px solid red; */
   width: calc(100% - 24px);
-  max-width: 600px;
+  max-width: 550px;
   margin: 24px auto;
 }
 
@@ -59,6 +59,10 @@ a {
 .text_center,
 .btn_center {
   text-align: center;
+}
+
+.text_right {
+  text-align: right;
 }
 
 /* 各種パーツ section */
@@ -99,6 +103,10 @@ a {
 
 .main_btn:hover {
   opacity: .8;
+}
+
+.main_btn.wide {
+  width: 100%;
 }
 
 /* 各種パーツ gray_btn */
@@ -255,6 +263,7 @@ a {
 
 .search_form tr {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -265,10 +274,6 @@ a {
 .search_form th {
   font-size: 14px;
   font-weight: normal;
-}
-
-.search_form td {
-  margin-left: auto;
 }
 
 .search_form .table_select {
@@ -297,6 +302,80 @@ a {
   transform: rotate(45deg) translateY(-30%);
 }
 
+/* 各種パーツ profile_form */
+
+.profile_form * {
+  box-sizing: border-box;
+}
+
+.profile_form {
+  width: 100%;
+}
+
+.profile_form tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.profile_form th {
+  min-width: 40%;
+  text-align: left;
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.profile_form tr + tr {
+  border-top: 1px solid var(--base_color);
+}
+
+.profile_comment {
+  padding: 0.8em;
+  background: #fff5c8;
+}
+
+.profile .main_button button {
+  all: unset;
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--main_button_color);
+  box-shadow: 0 2px 0 var(--main_button_shadow_color);
+  border-radius: 24px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.profile .main_button button:hover {
+  opacity: .8;
+}
+
+.profile .sub_buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.profile .sub_buttons button {
+  all: unset;
+  margin-top: 8px;
+  width: calc(100% / 3);
+  padding: 8px 0;
+  border: 1px solid var(--base_color);
+  border-radius: 24px;
+  color: var(--base_color);
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.profile .sub_buttons button:hover {
+  opacity: .8;
+}
 /* 各種パーツ receive_message */
 
 .receive_message h1,
@@ -312,6 +391,25 @@ a {
   background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 8px;
+  color: #666;
+}
+
+/* 各種パーツ tel_contact */
+
+.tel_contact {
+  margin-top: 36px;
+  padding: 12px 24px;
+  border: 1px solid #666;
+  color: #666;
+}
+
+.tel_contact h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.tel_contact .phone_number {
+  font-size: 24px;
   color: #666;
 }
 
@@ -518,6 +616,145 @@ footer small {
   color: var(--footer_text_color);
   text-align: center;
 }
+
+/* entrance (登録ページ) */
+
+.entrance h1 {
+  padding-bottom: 16px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.entrance h2 {
+  margin-top: 16px;
+  border-top: 1px solid #aaa;
+  padding: 24px 0 8px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.entrance p {
+  padding: 4px 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.entrance li {
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.entrance li:hover {
+  opacity: 0.7;
+}
+
+.entrance li a {
+  display: block;
+  padding: 12px 0;
+}
+
+.entrance li i {
+  position: absolute;
+  left: 24px;
+  font-size: 20px;
+}
+
+.entrance li + li {
+  margin-top: 12px;
+}
+
+.entrance li.line {
+  background-color: #00c300;
+  color: #fff;
+}
+
+.entrance li.facebook {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.entrance li.twitter {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.entrance li.e-mail {
+  background-color: var(--main_button_color);
+  color: #fff;
+}
+
+.entrance li.login {
+  background-color: transparent;
+  border: 1px solid var(--main_button_color);
+  color: var(--main_button_color);
+}
+
+.entrance li.login:hover {
+  background-color: rgba(255, 111, 118, .3);
+}
+
+/* entrance_email (メールアドレスで登録ページ) */
+
+.entrance_email p {
+  font-size: 14px;
+  color: #666;
+}
+
+.entrance_email .main_btn {
+  margin-bottom: 16px;
+  border-radius: 24px;
+  min-width: 50%;
+  padding: 8px 0;
+}
+
+.entrance_email .domain {
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.entrance_email .e-mail {
+  box-sizing: border-box;
+  padding: 12px 12px;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* login_email (メールアドレスでログイン) */
+
+.login_email .e-mail {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.login_email h1 {
+  padding-bottom: 16px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.login_email .container input {
+  margin-bottom: 12px;
+}
+
+.login_email .text_right {
+  margin-top: 12px;
+  color: #0073cc;
+}
+
+.login_email .bi-chevron-right {
+  margin-left: 6px;
+}
+
 
 /* search (検索ページ) */
 
