@@ -12,6 +12,7 @@
   --base_dark_color: #429baf;
   --main_button_color: #ff6f76;
   --main_button_shadow_color: #cc595f;
+  --main_button_background_color: #ffeffc;
   --gray_button_color: #ccc;
   --gray_button_shadow_color: #aaa;
   --footer_bg_color: #f3e8d9;
@@ -47,6 +48,12 @@ a {
   color: inherit;
 }
 
+.link_color {
+  color: #065FD4;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
 .container {
   /* outline: 1px solid red; */
   width: calc(100% - 24px);
@@ -77,7 +84,7 @@ a {
   margin-bottom: 12px;
   padding-bottom: 4px;
   font-size: 18px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dashed #ccc;
 }
 
 .base_section_style + .base_section_style {
@@ -90,7 +97,7 @@ a {
   all: unset;
   margin-top: 12px;
   width: 40%;
-  padding: 6px 0;
+  padding: 8px 0;
   background-color: var(--main_button_color);
   border-radius: 4px;
   box-shadow: 0 2px 0 var(--main_button_shadow_color);
@@ -115,7 +122,7 @@ a {
   all: unset;
   margin-top: 12px;
   width: 40%;
-  padding: 6px 0;
+  padding: 8px 0;
   background-color: var(--gray_button_color);
   border-radius: 4px;
   box-shadow: 0 2px 0 var(--gray_button_shadow_color);
@@ -251,6 +258,113 @@ a {
   margin-top: 12px;
 }
 
+/* 各種パーツ mail_list_style */
+
+/* .mail_list_style li {
+  padding: 12px 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #666;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.mail_list_style li:hover {
+  background-color: #eee;
+}
+
+.mail_list_style li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mail_list_style li + li {
+  margin-top: 12px;
+}
+
+.mail_list_style li a span:nth-of-type(1) {
+  width: 20%;
+}
+
+.mail_list_style li a span:nth-of-type(2) {
+  width: 45%;
+}
+
+.mail_list_style li a span:nth-of-type(3) {
+  width: 15%;
+}
+
+.mail_list_style li a span:nth-of-type(4) {
+  width: 10%;
+}
+
+.mail_list_style li.list_heading {
+  border: 1px solid var(--base_color);
+  color: var(--base_color);
+}
+
+.mail_list_style li.list_heading a {
+  cursor: unset;
+}
+
+.mail_list_style li.list_heading:hover {
+  background-color: #fff;
+  cursor: unset;
+} */
+
+.mail_list_style li {
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #666;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.mail_list_style li:not(:first-of-type):hover {
+  background-color: #eee;
+}
+
+.mail_list_style li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mail_list_style li + li {
+  border-top: 1px solid #ccc;
+}
+
+.mail_list_style li a span:nth-of-type(1) {
+  width: 20%;
+}
+
+.mail_list_style li a span:nth-of-type(2) {
+  width: 45%;
+}
+
+.mail_list_style li a span:nth-of-type(3) {
+  width: 15%;
+}
+
+.mail_list_style li a span:nth-of-type(4) {
+  width: 10%;
+}
+
+.mail_list_style li.list_heading {
+  background-color: #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+.mail_list_style li.list_heading a {
+  cursor: unset;
+}
+
+.mail_list_style li.list_heading:hover {
+  cursor: unset;
+}
+
 /* 各種パーツ search_form */
 
 .search_form * {
@@ -308,15 +422,34 @@ a {
   box-sizing: border-box;
 }
 
+.profile h2 {
+  padding: 12px;
+  background-color: var(--base_color);
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  display: flex;
+}
+
+.profile h2 span {
+  margin-left: auto;
+}
+
+.profile img {
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
 .profile_form {
   width: 100%;
 }
 
 .profile_form tr {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 8px;
+  border-bottom: 1px solid var(--base_color);
 }
 
 .profile_form th {
@@ -327,20 +460,17 @@ a {
   font-weight: normal;
 }
 
-.profile_form tr + tr {
-  border-top: 1px solid var(--base_color);
-}
-
 .profile_comment {
+  margin-top: 8px;
   padding: 0.8em;
   background: #fff5c8;
 }
 
-.profile .main_button button {
+.profile .main_button {
   all: unset;
-  margin-top: 8px;
+  margin-top: 12px;
   width: 100%;
-  padding: 10px 0;
+  padding: 12px 0;
   background-color: var(--main_button_color);
   box-shadow: 0 2px 0 var(--main_button_shadow_color);
   border-radius: 24px;
@@ -351,8 +481,21 @@ a {
   transition: opacity .3s;
 }
 
-.profile .main_button button:hover {
+.profile .main_button:hover {
   opacity: .8;
+}
+
+.profile .main_button.send {
+  border: 1px solid var(--main_button_color);
+  background-color: inherit;
+  box-shadow: none;
+  color: var(--main_button_color);
+  font-weight: normal;
+}
+
+.profile .main_button.gray {
+  background-color: var(--gray_button_color);
+  box-shadow: 0 2px 0 var(--gray_button_shadow_color);
 }
 
 .profile .sub_buttons {
@@ -362,9 +505,9 @@ a {
 
 .profile .sub_buttons button {
   all: unset;
-  margin-top: 8px;
+  margin-top: 12px;
   width: calc(100% / 3);
-  padding: 8px 0;
+  padding: 10px 0;
   border: 1px solid var(--base_color);
   border-radius: 24px;
   color: var(--base_color);
@@ -376,6 +519,127 @@ a {
 .profile .sub_buttons button:hover {
   opacity: .8;
 }
+
+/* 各種パーツ primary_box */
+
+.primary_box {
+  text-align: center;
+  margin: 8px 0;
+  padding: 12px 8px;
+  background-color: var(--main_button_background_color);
+  border-radius: 8px;
+}
+
+.primary_box p {
+  font-weight: bold;
+}
+
+.primary_box p.caution_color {
+  color: #ff3333;
+}
+
+.primary_box p.comment {
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.primary_box .phone_number {
+  font-size: 24px;
+  color: var(--main_button_color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.primary_box p + p {
+  margin-top: 8px;
+}
+
+.primary_box .main_button.no_margin {
+  margin-top: 0;
+}
+
+/* 各種パーツ dialog_confirm */
+
+#dialog_confirm {
+  /* display: none; */
+  max-width: 460px;
+  width: 90%;
+  padding: 0.5em;
+  border-radius: 4px;
+  /* font-size: 12px; */
+  line-height: 1.4;
+  background-color: #fcfcfc;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
+}
+
+.dialog_confirm_box {
+  display: block;
+  padding: 1em;
+  border-radius: 3px;
+  border: 3px solid var(--base_color);
+  /* text-align: center; */
+}
+
+.dialog_confirm_box p {
+  font-weight: bold;
+}
+
+.dialog_confirm_box span {
+  margin: 0 2px;
+  padding: 4px;
+  background-color: var(--base_color);
+  color: #fff;
+}
+
+.dialog_confirm_box div {
+  margin-top: 8px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.dialog_confirm_box button {
+  all: unset;
+  padding: 4px;
+  border: 1px solid var(--base_color);
+  border-radius: 4px;
+  color: var(--base_color);
+}
+
+.dialog_confirm_box button.cancel {
+  border: 1px solid var(--main_button_color);
+  color: var(--main_button_color);
+}
+
+/* 各種パーツ message_box */
+
+.message_box {
+  margin: 12px 0;
+}
+
+.message_box h1 {
+  color: var(--main_button_color);
+  font-size: 16px;
+}
+
+.message_box p {
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  color: #666;
+}
+
+.message_box p + h1 {
+  margin-top: 8px;
+}
+
 /* 各種パーツ receive_message */
 
 .receive_message h1,
@@ -392,6 +656,12 @@ a {
   border: 1px solid #ccc;
   border-radius: 8px;
   color: #666;
+}
+
+.send_message p {
+  padding: 8px;
+  background-color: var(--main_button_background_color);
+  border-radius: 8px;
 }
 
 /* 各種パーツ tel_contact */
@@ -790,7 +1060,7 @@ footer small {
 
 /* mail (メッセージページ) */
 
-.mail h3 {
+h3.mail_title {
   color: #aaa;
   font-size: 16px;
   font-weight: normal;
@@ -799,6 +1069,14 @@ footer small {
 
 .mail .container div + div {
   margin-top: 16px;
+}
+
+h3.mail_title_detail {
+  /* color: var(--main_button_color); */
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 /* diary (日記結果ページ) */
@@ -980,10 +1258,16 @@ footer small {
   width: 50%;
   padding: 8px;
   margin: 16px auto;
-  background: #ff3333;
+  border: 1px solid #ff3333;
+  background: var(--main_button_background_color);
   border-radius: 8px;
-  color: #fff;
-  text-align: center;
+  color: #ff3333;
+}
+
+.sitemail .caution .comment {
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .sitemail li.box_right {
@@ -1067,6 +1351,30 @@ footer small {
   bottom: 5px;
 }
 
+.sitemail .box_left p.finish {
+  background: var(--main_button_background_color);
+}
+
+.sitemail li.box_left p.finish::before {
+  border-right: 10px solid var(--main_button_background_color);
+}
+
+.sitemail .caution button {
+  all: unset;
+  margin-top: 4px;
+  padding: 4px 0;
+  width: 40%;
+  background-color: var(--main_button_color);
+  color: #fff;
+  border: 1px solid var(--main_button_color);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.sitemail .caution button:hover {
+  opacity: .8;
+}
+
 .sitemail form {
   position: fixed;
   bottom: 0;
@@ -1087,7 +1395,7 @@ footer small {
   border-radius: 8px;
 }
 
-/* communicate01 交際申込み */
+/* communicate メッセージ送信フォーム */
 
 .communicate form {
   width: 100%;
