@@ -9,12 +9,16 @@
   --hl_title_back: #99ebf7;
   --notice_txt_color:  #d2404d; */
   --base_color: #4db4cb;
+  --base_light_color: #4fbcd5;
   --base_dark_color: #429baf;
+  --main_button_light_color: #f78d93;
   --main_button_color: #ff6f76;
   --main_button_shadow_color: #cc595f;
   --main_button_background_color: #ffeffc;
   --gray_button_color: #ccc;
   --gray_button_shadow_color: #aaa;
+  --link_color: #065FD4;
+  --caution_color: #FF3333;
   --footer_bg_color: #f3e8d9;
   --footer_text_color: rgba(128, 106, 74, .75);
 }
@@ -49,12 +53,16 @@ a {
 }
 
 .link_color {
-  color: #065FD4;
+  color: var(--link_color);
   cursor: pointer;
 }
 
 .link_space {
   margin: 0 4px;
+}
+
+.caution_color {
+  color: var(--caution_color);
 }
 
 .container {
@@ -142,7 +150,7 @@ a {
 
 /* 各種パーツ タブメニュー tabs */
 
-.tabs {
+/* .tabs {
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -166,8 +174,9 @@ a {
 .tabs_left.active,
 .tabs_right.active {
   border-bottom: 2px solid var(--base_color);
-}
-/* 
+} */
+
+
 .tabs {
   display: flex;
   justify-content: space-between;
@@ -214,7 +223,7 @@ a {
 .tabs_right.active {
   background-color: var(--base_color);
   color: #fff;
-} */
+}
 
 /* 各種パーツ select_btn */
 
@@ -325,6 +334,12 @@ a {
 
 .mail_list_style li a span:nth-of-type(4) {
   width: 10%;
+}
+
+.mail_list_style li a span.no_member {
+  width: 100%;
+  color: var(--caution_color);
+  text-align: center;
 }
 
 .mail_list_style li:first-child {
@@ -534,7 +549,7 @@ a {
 }
 
 .primary_box p.caution_color {
-  color: #ff3333;
+  color: var(--caution_color);
 }
 
 .primary_box p.comment {
@@ -564,10 +579,9 @@ a {
 #dialog_confirm {
   /* display: none; */
   max-width: 460px;
-  width: 90%;
-  padding: 0.5em;
-  border-radius: 4px;
-  /* font-size: 12px; */
+  width: 60%;
+  padding: 1.5em;
+  border-radius: 16px;
   line-height: 1.4;
   background-color: #fcfcfc;
   position: fixed;
@@ -575,15 +589,17 @@ a {
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 100;
-  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
 }
 
-.dialog_confirm_box {
-  display: block;
-  padding: 1em;
-  border-radius: 3px;
-  border: 3px solid var(--base_color);
-  /* text-align: center; */
+.dialog_confirm_box h1 {
+  padding-bottom: 4px;
+  font-size: 20px;
+  border-bottom: 1px dashed #333;
+  margin-bottom: 12px;
+}
+
+.dialog_confirm_box h1 + p {
+  font-weight: normal;
 }
 
 .dialog_confirm_box p {
@@ -593,45 +609,47 @@ a {
 .dialog_confirm_box span {
   margin: 0 2px;
   padding: 4px;
-  background-color: var(--base_color);
+  background-color: var(--base_light_color);
   color: #fff;
-}
-
-.dialog_confirm_box div {
-  margin-top: 8px;
-  display: flex;
-  gap: 24px;
-  justify-content: center;
 }
 
 .dialog_confirm_box button {
   all: unset;
-  padding: 4px;
-  border: 1px solid var(--base_color);
-  border-radius: 4px;
-  color: var(--base_color);
+  box-sizing: border-box;
+  display: block;
+  margin-top: 24px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--base_light_color);
+  border-radius: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dialog_confirm_box button:hover {
+  cursor: pointer;
 }
 
 .dialog_confirm_box button.cancel {
-  border: 1px solid var(--main_button_color);
-  color: var(--main_button_color);
+  background: #eee;
+  color: #aaa;
 }
 
-/* 各種パーツ question_box */
+.dialog_confirm_box button.close {
+  background: #ddd;
+  color: #999;
+}
 
-#question_box {
-  max-width: 460px;
-  width: 90%;
-  padding: 0.5em;
-  border-radius: 4px;
-  line-height: 1.4;
-  background-color: #fcfcfc;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: 100;
-  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
+.dialog_confirm_box button + button {
+  margin-top: 8px;
+}
+
+/* クエスチョン */
+
+.bi-exclamation-circle-fill {
+  color: var(--base_color);
+  margin-right: 8px;
 }
 
 /* 各種パーツ message_box */
@@ -774,6 +792,18 @@ a {
 
 #mask.show {
   display: block;
+}
+
+/* popup_mask */
+
+#popup_mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 2;
 }
 
 /* overlay_menu */
@@ -983,6 +1013,26 @@ footer small {
   background-color: rgba(255, 111, 118, .3);
 }
 
+/* pre_entrance_finish (仮登録完了ページ) */
+
+.pre_entrance_finish .email {
+  margin: 4px auto;
+  padding: 12px;
+  background-color: #ddd;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pre_entrance_finish .tel_contact ol {
+  margin: 12px 0;
+  padding: 0;
+}
+
+.pre_entrance_finish .tel_contact ol li {
+  list-style-type: order;
+  font-size: 14px;
+}
+
 /* entrance_email (メールアドレスで登録ページ) */
 
 .entrance_email p {
@@ -1039,6 +1089,12 @@ footer small {
 
 .login_email .bi-chevron-right {
   margin-left: 6px;
+}
+
+/* 検索ページでのメインボタン */
+
+.autointro .main_btn {
+  margin-top: 18px;
 }
 
 /* search (検索ページ) */
@@ -1280,22 +1336,6 @@ h3.mail_title_detail {
   margin-top: 10px;
 }
 
-.sitemail .caution {
-  width: 60%;
-  padding: 8px;
-  margin: 16px auto;
-  border: 2px solid #ff3333;
-  background: var(--main_button_background_color);
-  border-radius: 8px;
-  color: #ff3333;
-}
-
-.sitemail .caution .comment {
-  color: #666;
-  font-size: 14px;
-  font-weight: normal;
-}
-
 .sitemail li.box_right {
   flex-direction: row-reverse;
 }
@@ -1361,13 +1401,31 @@ h3.mail_title_detail {
   border-radius: 50%;
 }
 
+.sitemail .box_left p span.sitemailBox_read {
+  display: block;
+  margin-top: 7px;
+  font-size: .8em;
+  position: absolute;
+  right: -35px;
+  bottom: 18px;
+}
+
+.sitemail .box_right p span.sitemailBox_read {
+  display: block;
+  margin-top: 7px;
+  font-size: .8em;
+  position: absolute;
+  left: -35px;
+  bottom: 18px;
+}
+
 .sitemail .box_left p span.sitemailBox_info {
   display: block;
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  right: 0px;
-  bottom: -20px;
+  right: -70px;
+  bottom: 4px;
 }
 
 .sitemail .box_right p span.sitemailBox_info {
@@ -1375,8 +1433,8 @@ h3.mail_title_detail {
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  left: 0px;
-  bottom: -20px;
+  left: -70px;
+  bottom: 4px;
 }
 
 .sitemail .box_left p.finish {
@@ -1385,6 +1443,32 @@ h3.mail_title_detail {
 
 .sitemail li.box_left p.finish::before {
   border-right: 10px solid var(--main_button_background_color);
+}
+
+.sitemail .caution {
+  position: relative;
+  width: 60%;
+  padding: 8px;
+  margin: 16px auto;
+  border: 2px solid var(--caution_color);;
+  background: var(--main_button_background_color);
+  border-radius: 8px;
+  color: var(--caution_color);;
+}
+
+.sitemail .caution .comment {
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.sitemail .caution span.sitemailBox_info {
+  display: block;
+  margin-top: 7px;
+  font-size: .8em;
+  position: absolute;
+  right: -70px;
+  bottom: 4px;
 }
 
 .sitemail .caution button {
