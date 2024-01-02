@@ -1041,21 +1041,27 @@ footer small {
 /* pre_entrance_finish (仮登録完了ページ) */
 /* communicate (メールアドレスを変更するページ) */
 /* setting (年齢制限設定ページ) */
+/* payment (ポイント購入ページ) */
 
 .pre_entrance_finish .email,
 .communicate .email,
-.setting .alert {
+.setting .alert,
+.payment .alert {
   margin: 4px auto;
   padding: 12px;
   background-color: #ddd;
   font-weight: bold;
+  font-size: 16px;
+}
+
+.pre_entrance_finish .email {
   font-size: 20px;
 }
 
-.setting .alert {
+.setting .alert,
+.payment .alert {
   color: #fff;
   background-color: var(--base_light_color);
-  font-size: 16px;
 }
 
 .pre_entrance_finish .tel_contact ol {
@@ -1568,4 +1574,14 @@ h3.mail_title_detail {
 
 .setting .search_form td{
   margin: 0 auto;
+}
+
+/* settting_mail_notification メール通知設定フォーム */
+
+.setting .checkbox {
+  margin: 25px auto;
+}
+
+.setting .checkbox li+li {
+  margin-top: 8px;
 }
