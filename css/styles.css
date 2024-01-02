@@ -65,6 +65,10 @@ a {
   color: var(--caution_color);
 }
 
+.small_font {
+  font-size: 14px;
+}
+
 .container {
   /* outline: 1px solid red; */
   width: calc(100% - 24px);
@@ -147,6 +151,27 @@ a {
 .gray_btn:hover {
   opacity: .8;
 }
+
+/* 各種パーツ green_btn */
+
+.green_btn {
+  all: unset;
+  margin-top: 12px;
+  width: 40%;
+  padding: 8px 0;
+  background-color: var(--base_color);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.green_btn:hover {
+  opacity: .8;
+}
+
 
 /* 各種パーツ タブメニュー tabs */
 
@@ -1014,13 +1039,23 @@ footer small {
 }
 
 /* pre_entrance_finish (仮登録完了ページ) */
+/* communicate (メールアドレスを変更するページ) */
+/* setting (年齢制限設定ページ) */
 
-.pre_entrance_finish .email {
+.pre_entrance_finish .email,
+.communicate .email,
+.setting .alert {
   margin: 4px auto;
   padding: 12px;
   background-color: #ddd;
   font-weight: bold;
   font-size: 20px;
+}
+
+.setting .alert {
+  color: #fff;
+  background-color: var(--base_light_color);
+  font-size: 16px;
 }
 
 .pre_entrance_finish .tel_contact ol {
@@ -1523,4 +1558,14 @@ h3.mail_title_detail {
   padding: 8px;
   border: 1px solid #333;
   border-radius: 8px;
+}
+
+/* setting_age_limit 年齢制限設定フォーム*/
+
+.setting .search_form {
+  padding: 12px 30px 8px;
+}
+
+.setting .search_form td{
+  margin: 0 auto;
 }
