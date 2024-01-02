@@ -94,40 +94,153 @@
 
 </header>
 
-<section class="setting">
+<section class="payment">
   <div class="container">
-    <ul class="base_list_style">
-      <li>
-        <a href="payment01.html">
-          <span>ポイント購入 TOP</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="payment02.html">
-          <span>クレジット決済 → ２回目</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="payment03.html">
-          <span>クレジット決済 → 前回のカードで購入</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="payment04.html">
-          <span>クレジット決済 → 前回のカードで購入 → 完了</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="payment05.html">
-          <span>銀行振込み → 振込完了報告後</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
+    <ul class="tabs">
+      <li><a href="#" class="tabs_left active" data-id="buy">ポイント購入</a></li>
+      <li><a href="#" class="tabs_right" data-id="history">ポイント履歴</a></li>
     </ul>
+
+    <section class="point active" id="buy">
+
+      <section class="base_section_style">
+        <h2>保有ポイント</h2>
+        <p class="remaining_point">2,200ポイント</p>
+      </section>
+
+      <section class="base_section_style">
+        <h2>クレジット決済</h2>
+        <p>以下のカードがご利用いただけます。</p>
+        <div class="pic">
+          <img src="img/cc_img.png" alt="" width="300" height="37">
+        </div>
+        <div class="select">
+          <select name="" id="">
+            <option value="3,000">3,000p</option>
+            <option value="8,000">8,000p</option>
+            <option value="15,000">15,000p</option>
+          </select>
+        </div>
+        <div class="btn_center">
+          <button class="main_btn">前回のカードで購入</button>
+        </div>
+        <div class="btn_center">
+          <button class="gray_btn">新しいカードで購入</button>
+        </div>
+      </section>
+
+      <section class="base_section_style">
+        <h2>コンビニ決済 (ビットキャッシュ)</h2>
+        <div class="pic">
+          <img src="img/bc_w143px.gif" alt="">
+        </div>
+        <p>
+          コンビニで24時間いつでも購入できます。<br>
+          購入いただける取り扱い店舗はこちら<br>
+          コンビニにて「ビットキャッシュ」を購入後、下の項目から金額を選び、「購入する」をクリックしてください。
+        </p>
+        <div class="select">
+          <select name="" id="">
+            <option value="3,000">3,000p</option>
+            <option value="8,000">8,000p</option>
+            <option value="15,000">15,000p</option>
+          </select>
+        </div>
+        <div class="btn_center">
+          <button class="main_btn">購入する</button>
+        </div>
+      </section>
+
+      <section class="base_section_style">
+        <h2>銀行振込み</h2>
+        <fieldset>
+          <legend>お振込み先</legend>
+          <div class="text_center">
+            三菱UFJ銀行 名古屋駅前支店<br>
+            普通<span>5713113</span>株式会社 鳩山実業
+          </div>
+        </fieldset>
+        <p>
+          お振込みの際は「振込み名義」にご自身の会員ID(M000000)を入力してください。<br>
+          ※振込み手数料はお客様の負担となります<br>
+          振込みを済ませた方は「送信する」ボタンをクリックしてください。
+        </p>
+        <div class="text">
+          <input type="text" placeholder="M000000">
+        </div>
+        <div class="select">
+          <select name="" id="">
+            <option value="3,000">3,000p</option>
+            <option value="8,000">8,000p</option>
+            <option value="15,000">15,000p</option>
+          </select>
+        </div>
+        <div class="btn_center">
+          <button class="main_btn">送信する</button>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="point" id="history">
+      <section class="base_section_style">
+        <h2>保有ポイント</h2>
+        <p class="remaining_point">2,200ポイント</p>
+      </section>
+      <section>
+        <table class="point_history">
+          <thead>
+            <tr>
+              <th>日時</th>
+              <th>用途</th>
+              <th>ポイント数</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2022/08/14</td>
+              <td>メール開通</td>
+              <td>-2500</td>
+            </tr>
+            <tr>
+              <td>2022/08/12</td>
+              <td>ポイント購入</td>
+              <td>8000</td>
+            </tr>
+            <tr>
+              <td>2022/08/12</td>
+              <td>ポイント購入</td>
+              <td>8000</td>
+            </tr>
+            <tr>
+              <td>2022/08/12</td>
+              <td>ポイント購入</td>
+              <td>8000</td>
+            </tr>
+            <tr>
+              <td>2022/08/12</td>
+              <td>ポイント購入</td>
+              <td>8000</td>
+            </tr>
+            <tr>
+              <td>2022/08/12</td>
+              <td>ポイント購入</td>
+              <td>8000</td>
+            </tr>
+            <tr>
+              <td>2022/08/12</td>
+              <td>ポイント購入</td>
+              <td>8000</td>
+            </tr>
+            <tr>
+              <td>2022/08/01</td>
+              <td>超いいね</td>
+              <td>-100</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
   </div>
 </section>
 
