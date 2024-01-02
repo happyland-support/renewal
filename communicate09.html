@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>検索ページ</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="search.html">
+          <i class="bi bi-search"></i>
+          <span>検索</span>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <i class="bi bi-envelope-open"></i>
+          <span>メール</span>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <i class="bi bi-heart"></i>
+          <span>お気に入り</span>
+        </a>
+      </li>
+      <li>
+        <a href="circle.html">
+          <i class="bi bi-people"></i>
+          <span>サークル</span>
+        </a>
+      </li>
+      <li>
+        <a href="diary.html">
+          <i class="bi bi-calendar3"></i>
+          <span>日記</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-list"></i>
+          <span>メニュー</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+<div id="dialog_confirm">
+  <div class="dialog_confirm_box">
+    <p>
+      メッセージ内容を入力してください
+    </p>
+    <div>
+      <button class="close">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<div id="popup_mask"></div>
+
+<section class="communicate">
+  <div class="container">
+    <section class="base_section_style">
+      <h2>OK返事メール</h2>
+      <table class="search_form">
+        <tbody>
+          <tr>
+            <td>M000000</td>
+            <td>さなえさん</td>
+            <td>2022/09/08</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="receive_message">
+        <h1>お相手からのメッセージ</h1>
+        <p>
+          こんにちは。<br>
+          プロフィールを見て、メッセージさせていただきました。<br>
+          仲良くなったら一緒にカラオケに行ってみたいです。<br>
+          よろしくお願いします。
+        </p>
+      </div>
+      <div class="send_message">
+        <h1>送信するメッセージ</h1>
+        <form action="">
+          <textarea name="" id="" cols="30" rows="10" placeholder="こちらにメッセージを記入してください。&#10;メッセージは300文字以内です。&#10;連絡先は記入しないください。"></textarea>
+        </form>
+      </div>
+      <div class="select">
+        <select name="" id="">
+          <option value="">サイトメールを希望(推奨)</option>
+          <option value="">直アドを希望</option>
+        </select>
+      </div>
+      <div class="btn_center">
+        <button class="main_btn">メッセージを送信</button>
+      </div>
+      <div class="btn_center">
+        <button class="gray_btn">プロフィールに戻る</button>
+      </div>
+    </section>
+
+    <section class="base_section_style">
+      <h2>お断りをする</h2>
+      <!-- <div class="select">
+        <select name="" id="">
+          <option value="">理由を選択してください</option>
+          <option value="">あなたの希望に添えないので、ごめんなさい</option>
+          <option value="">自分の希望と異なるので、ごめんなさい</option>
+          <option value="">写真が掲載されていないので、ごめんなさい</option>
+          <option value="">年齢が離れているので、ごめんなさい</option>
+          <option value="">距離が離れているので、ごめんなさい</option>
+          <option value="">今気になる人がいるので、ごめんなさい</option>
+          <option value="">お気持ちに応えられませんので、ごめんなさい</option>
+        </select>
+      </div> -->
+      <div class="btn_center">
+        <button class="gray_btn">お断りを送信</button>
+      </div>
+    </section>
+  </div>
+</section>
+
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>お気に入り</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
