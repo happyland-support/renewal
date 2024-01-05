@@ -1566,6 +1566,66 @@ h3.mail_title_detail {
   border-radius: 8px;
 }
 
+/* menu-profile_edit (プロフィール変更ページ) */
+
+.profile_edit dl {
+  margin: 0;
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+}
+
+.profile_edit dt {
+  width: 35%;
+  padding-left: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.profile_edit dd {
+  width: 65%;
+}
+
+.profile_edit dd input {
+  width: 95%;
+  padding: 12px 8px;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+}
+
+.profile_edit dd select {
+  background-color: #eee;
+}
+
+.profile_edit dl.textarea {
+  display: block;
+}
+
+.profile_edit dd textarea {
+  display: block;
+}
+
+/* menu-profile_age (年齢認証ページ) */
+
+button.file {
+  width: 100%;
+  margin-top: 8px;
+  padding: 16px 12px;
+  background: #fff;
+  border: 1px solid var(--main_button_color);
+  border-radius: 8px;
+  color: var(--main_button_color);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file:hover {
+  background: #ffe1e2;
+}
+
 /* setting_age_limit 年齢制限設定フォーム*/
 
 .setting .search_form {
