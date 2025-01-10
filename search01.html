@@ -94,62 +94,85 @@
 
 </header>
 
-<section class="mail">
+<section class="search">
   <div class="container">
-    <div>
-      <h3 class="mail_title_detail">ブロックリスト</h3>
-      <p class="question link_color">ブロックリストとは<i class="bi bi-question-circle-fill"></i></p>
-      <ul class="mail_list_style">
-        <li class="list_heading">
-          <a href="">
-            <span>会員番号</span>
-            <span>ニックネーム</span>
-            <span>地域</span>
-            <span>日付</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span>M511000</span>
-            <span>たかし(60歳)</span>
-            <span>愛知県</span>
-            <span>10/24</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span>M511000</span>
-            <span>たかし(60歳)</span>
-            <span>愛知県</span>
-            <span>10/24</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span>M511000</span>
-            <span>たかし(60歳)</span>
-            <span>愛知県</span>
-            <span>10/24</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span>M511000</span>
-            <span>たかし(60歳)</span>
-            <span>愛知県</span>
-            <span>10/24</span>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <span>M511000</span>
-            <span>たかし(60歳)</span>
-            <span>愛知県</span>
-            <span>10/24</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <section class="base_section_style">
+      <h2>お相手検索</h2>
+      <table class="search_form">
+        <tbody>
+          <tr>
+            <th>性別</th>
+            <td>
+              <div class="table_select noneselect">
+                <select name="" id="">
+                  <option value="">女性</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>居住地</th>
+            <td>
+              <div class="table_select">
+                <select name="" id="">
+                  <option value="">北海道・東北</option>
+                  <option value="">東京・神奈川</option>
+                  <option value="">関東・甲信越</option>
+                  <option value="">東海・北陸</option>
+                  <option value="">近畿</option>
+                  <option value="">中・四国</option>
+                  <option value="">九州・沖縄</option>
+                  <option value="">海外</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>年齢</th>
+            <td>
+              <div class="table_select">
+                <select name="" id="">
+                  <option value="">10代</option>
+                  <option value="">80代以上</option>
+                </select>
+              </div>
+              ～
+              <div class="table_select">
+                <select name="" id="">
+                  <option value="">10代</option>
+                  <option value="">80代以上</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn_center">
+        <button class="main_btn">この条件で検索</button>
+      </div>
+      <div class="btn_center">
+        <button class="gray_btn">さらに条件を絞る</button>
+      </div>
+    </section>
+    <!-- <section class="base_section_style">      
+      <h2>ごはん相手検索</h2>
+      <div class="btn_center">
+        <button class="green_btn">今日のごはん相手検索</button>
+      </div>
+    </section> -->
+    <!-- <section class="base_section_style">      
+      <h2>写真検索</h2>
+      <div class="btn_center">
+        <button class="green_btn"><i class="bi bi-lock-fill"></i> 写真一覧を見る</button>
+      </div>
+    </section> -->
+    <section class="base_section_style login_email">      
+      <h2>会員ID検索</h2>
+      <input type="text" placeholder="(例) M123456" class="e-mail">
+      <div class="btn_center">
+        <button class="green_btn">お相手ID検索</button>
+      </div>
+    </section>
   </div>
 </section>
 
