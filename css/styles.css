@@ -17,6 +17,8 @@
   --main_button_background_color: #ffeffc;
   --gray_button_color: #ccc;
   --gray_button_shadow_color: #aaa;
+  --site_mail_color: #c5e2ff;
+  --site_mail_background_color: #edf5ff;
   --link_color: #065FD4;
   --caution_color: #FF3333;
   --footer_bg_color: #f3e8d9;
@@ -67,6 +69,19 @@ a {
 
 .small_font {
   font-size: 14px;
+}
+
+/* 補足文字 */
+
+.sub_font {
+  font-size: 14px;
+  color: var(--gray_button_shadow_color);
+}
+
+/* 余白 */
+
+.space {
+  margin-top: 8px;
 }
 
 .container {
@@ -412,9 +427,14 @@ a {
 .search_form .table_select {
   display: inline-block;
   position: relative;
+  background-color: #eee;
   border: 1px solid #aaa;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.search_form .table_select.noneselect {
+  border: none;
 }
 
 .search_form .table_select select {
@@ -435,7 +455,44 @@ a {
   transform: rotate(45deg) translateY(-30%);
 }
 
-/* 各種パーツ profile_form */
+.search_form .table_select.noneselect::after {
+  display: none;
+}
+
+/* 仮登録 */
+
+.pre_registration li {
+  box-sizing: border-box;
+  background-color: var(--gray_button_color);
+  border: 2px solid #999;
+  border-radius: 32px;
+  width: 100%;
+  min-width: 200px;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pre_registration li + li {
+  margin-top: 8px;
+}
+
+.pre_registration li.selected {
+  color: #fff;
+  border: 2px solid var(--base_color);
+  background-color: var(--base_color);
+}
+
+.pre_registration li i {
+  margin-right: 8px;
+}
+
+.pre_registration select {
+  width: 80px;
+  padding: 8px 12px;
+}
+
+/* 各種パーツ プロフィール　フォーム　profile_form */
 
 .profile_form * {
   box-sizing: border-box;
@@ -559,6 +616,12 @@ a {
   opacity: .8;
 }
 
+.profile .sub_buttons button.clicked {
+  color: #fff;
+  border-color: var(--base_light_color);
+  background-color: var(--base_light_color);
+}
+
 /* 各種パーツ primary_box */
 
 .primary_box {
@@ -631,6 +694,20 @@ a {
   font-weight: bold;
 }
 
+.dialog_confirm_box li {
+  color: #666;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dialog_confirm_box li:hover {
+  opacity: 0.7;
+}
+
+.dialog_confirm_box li+li {
+  margin-top: 12px;
+}
+
 .dialog_confirm_box span {
   margin: 0 2px;
   padding: 4px;
@@ -668,6 +745,12 @@ a {
 
 .dialog_confirm_box button + button {
   margin-top: 8px;
+}
+
+.dialog_confirm_box li {
+  padding: 8px;
+  border: 1px solid var(--gray_button_shadow_color);
+  border-radius: 8px;
 }
 
 /* クエスチョン */
@@ -800,6 +883,23 @@ a {
 
 .top_menu li span {
   font-size: 14px;
+}
+
+/* 通知マーク */
+
+.top_menu .notice {
+  position: relative;
+}
+
+.top_menu .notice div {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--caution_color);
+  /* background-color: var(--main_button_color); */
 }
 
 /* mask */
@@ -958,6 +1058,95 @@ footer small {
   text-align: center;
 }
 
+/* システム・料金案内ページ */
+
+.system table {
+  width: 100%;
+  /* background-color: #26adcb; */
+  border-collapse: collapse;
+  border-radius: 8px;
+}
+
+.system th {
+  padding: 6px;
+  color: #fff;
+  background-color: #6bc5d9;
+  border-radius: 8px 8px 0 0;
+}
+
+.system tr:nth-child(odd) {
+  background-color: #f3fbfd;
+}
+
+.system tr:nth-child(even) {
+  background-color: #d5f4fc;
+}
+
+.system td {
+  padding: 6px 8px;
+}
+
+.system td:nth-child(2) {
+  text-align: right;
+  width: 25%;
+}
+
+.system .point_table td:nth-child(2) {
+  text-align: left;
+}
+
+.system tr {
+  background-color: var(--main_button_background_color);
+}
+
+.system table + table {
+  margin-top: 24px;
+}
+
+.system li {
+  padding: 25px 8px;
+  border: 1px solid #aaa;
+  border-radius: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.system li:not(:last-child):before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #aaa;
+}
+
+.system li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.system li + li {
+  margin-top: 25px;
+}
+
+.system li span {
+  width: 70%;
+}
+
+.system .table_color_red th {
+  background-color: #d96d6b;
+}
+
+.system .table_color_red tr:nth-child(odd) {
+  background-color: #fdf3f3;
+}
+
+.system .table_color_red tr:nth-child(even) {
+  background-color: #fcd7d5;
+}
+
 /* entrance (登録ページ) */
 
 .entrance h1 {
@@ -1008,6 +1197,16 @@ footer small {
   margin-top: 12px;
 }
 
+.entrance li.e-mail {
+  background-color: var(--main_button_color);
+  color: #fff;
+}
+
+.entrance li.phone {
+  background-color: var(--base_color);
+  color: #fff;
+}
+
 .entrance li.line {
   background-color: #00c300;
   color: #fff;
@@ -1018,13 +1217,8 @@ footer small {
   color: #fff;
 }
 
-.entrance li.twitter {
-  background-color: #1da1f2;
-  color: #fff;
-}
-
-.entrance li.e-mail {
-  background-color: var(--main_button_color);
+.entrance li.x {
+  background-color: #333333;
   color: #fff;
 }
 
@@ -1042,11 +1236,13 @@ footer small {
 /* communicate (メールアドレスを変更するページ) */
 /* setting (年齢制限設定ページ) */
 /* payment (ポイント購入ページ) */
+/* .autointro (お相手自動紹介ページ) */
 
 .pre_entrance_finish .email,
 .communicate .email,
 .setting .alert,
-.payment .alert {
+.payment .alert,
+.autointro .alert {
   margin: 4px auto;
   padding: 12px;
   background-color: #ddd;
@@ -1102,6 +1298,35 @@ footer small {
   border-radius: 4px;
 }
 
+
+/* entrance_phone (電話番号で登録) */
+
+.entrance_phone input[type="text"] {
+  box-sizing: border-box;
+  border: 2px solid var(--gray_button_shadow_color);
+  width: 40px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.entrance_phone .tel_code {
+  margin: 24px 0;
+}
+
+.entrance_phone li {
+  font-size: 14px;
+}
+
+.entrance_email input + p {
+  margin-top: 12px;
+}
+
 /* login_email (メールアドレスでログイン) */
 
 .login_email .e-mail {
@@ -1130,6 +1355,13 @@ footer small {
 
 .login_email .bi-chevron-right {
   margin-left: 6px;
+}
+
+/* ID・パスワード忘れた方 */
+
+.login_email p {
+  font-size: 14px;
+  color: #666;
 }
 
 /* 検索ページでのメインボタン */
@@ -1166,6 +1398,48 @@ footer small {
 
 .search li + li {
   margin-top: 12px;
+}
+
+/* その他の検索結果 */
+
+.search_etc .green_btn {
+  width: 80%;
+  padding: 12px 0;
+}
+
+.search_etc .btn_center + .btn_center {
+  margin-top: 12px;
+}
+
+
+
+/* 
+.green_btn {
+  all: unset;
+  margin-top: 12px;
+  width: 40%;
+  padding: 8px 0;
+  background-color: var(--base_color);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.green_btn:hover {
+  opacity: .8;
+} */
+
+/* いいね favorite*/
+
+.edit {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+  color: var(--main_button_color);
+  cursor: pointer;
 }
 
 /* search-result (検索結果ページ) */
@@ -1266,6 +1540,12 @@ h3.mail_title_detail {
   border-top: 1px solid #ccc;
 }
 
+.diary li.clicked {
+  color: #fff;
+  border-color: var(--main_button_color);
+  background-color: var(--main_button_color);
+}
+
 /* payment (ポイント購入・履歴ページ) */
 
 .payment .remaining_point {
@@ -1342,10 +1622,66 @@ h3.mail_title_detail {
   text-align: center;
 }
 
+/* クレジット決済ページ */
+
+.payment_credit dl {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+}
+
+.payment_credit dt {
+  text-align: right;
+  width: 25%;
+  /* padding-top: 8px; */
+  font-size: 13px;
+}
+
+.payment_credit dd {
+  width: 75%;
+}
+
+.payment_credit input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+}
+
+.payment_credit input[type="text"]:focus {
+  box-shadow: 0 0 4px 0 var(--footer_text_color);
+  border: 1px solid #fff;
+  outline: 0;
+}
+
+.payment_credit select {
+  width: 80px;
+  padding: 8px 12px;
+}
+
+.payment_credit .goodthru {
+  display: flex;
+  gap: 8px;
+}
+
+.payment_credit .add {
+  font-size: 10px;
+  color: var(--gray_button_shadow_color);
+}
+
+.payment_credit input[type="text"].code {
+  width: 100px;
+}
+
+.payment_credit .space {
+  margin-top: 32px;
+}
+
 /* sitemail (サイトメールページ) */
 
 .sitemail {
-  background-color: #d5dde7;
+  background-color: var(--site_mail_background_color);
 }
 
 .sitemail h1 {
@@ -1396,7 +1732,7 @@ h3.mail_title_detail {
   margin-bottom: 24px;
   padding: 10px;
   border-radius: 8px;
-  background-color: var(--footer_bg_color);
+  background-color: var(--site_mail_color);
   color: #302825;
 }
 
@@ -1421,7 +1757,7 @@ h3.mail_title_detail {
   height: 0;
   right: -10px;
   top: 1em;
-  border-left: 10px solid var(--footer_bg_color);
+  border-left: 10px solid var(--site_mail_color);
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
 }
@@ -1542,13 +1878,21 @@ h3.mail_title_detail {
 
 .sitemail input {
   width: 70%;
-  height: 24px;
+  height: 32px;
   padding: 4px;
   border: 1px solid #99857d;
   border-radius: 8px;
 }
 
-/* communicate メッセージ送信フォーム */
+.sitemail .send {
+  padding: 10px 18px;
+  border: 1px solid #99857d;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* communicate お問合せ　メッセージ送信フォーム */
 
 .communicate form {
   width: 100%;
@@ -1586,7 +1930,11 @@ h3.mail_title_detail {
   width: 65%;
 }
 
-.profile_edit dd input {
+.profile_edit dd label+label{
+  margin-left: 24px;
+}
+
+.profile_edit dd > input {
   width: 95%;
   padding: 12px 8px;
   background-color: #eee;
@@ -1599,10 +1947,6 @@ h3.mail_title_detail {
 }
 
 .profile_edit dl.textarea {
-  display: block;
-}
-
-.profile_edit dd textarea {
   display: block;
 }
 
