@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>検索ページ</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <i class="bi bi-heart"></i>
+          <span>いいね</span>
+        </a>
+      </li>
+      <li>
+        <a href="diary.html">
+          <i class="bi bi-calendar3"></i>
+          <span>日記</span>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-list"></i>
+          <span>メニュー</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="system">
+  <div class="container">
+
+    <section class="point active" id="buy">
+
+      <section class="base_section_style">
+        <h2>料金案内</h2>
+        <table>
+          <tbody>
+            <th colspan="2">
+              登録・検索・プロフィール
+            </th>
+            <tr>
+              <td>会員登録</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>お相手検索</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>プロフを見る</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>プロフ画像を見る</td>
+              <td>無料</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <th colspan="2">
+              日記
+            </th>
+            <tr>
+              <td>日記を読む</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>日記にいいねを送る</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>日記画像を見る</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>日記を投稿する</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>画像付き日記を投稿する</td>
+              <td>無料</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <th colspan="2">
+              メッセージのやり取り
+            </th>
+            <tr>
+              <td>いいねを送る</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>申込みメール</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>OK返事メール</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>アプローチメール(女性のみ)</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>受信したメッセージを読む</td>
+              <td>無料</td>
+            </tr>
+            <tr>
+              <td>メール開通する</td>
+              <td>250P</td>
+            </tr>
+            <tr>
+              <td>連絡先を交換する</td>
+              <td>100P</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="sub_font">
+          ※メール開通料金は申込んだ側のみ支払いが必要です。<br>
+          ※メール開通後は回数・期限など制限はありません。<br>
+          ※連絡先の交換は「メールアドレス・電話番号・ライン」になります。
+        </p>
+      </section>
+
+      <section class="base_section_style">
+        <h2>システムの流れ</h2>
+        <ul>
+          <li>
+            <span>
+              お相手を検索し、気になる方に<br>
+              「申込みメール」を送信します
+            </span>
+            <img src="img/search.png" alt="" height="100">
+          </li>
+          <li>
+            <span>
+              お相手から「OK返事」が届きます
+            </span>
+            <img src="img/receive.png" alt="" height="100">
+          </li>
+          <li>
+            <span>
+              ポイント購入後<br>
+              「メール開通」手続きをします
+            </span>
+            <img src="img/point.png" alt="" height="100">
+          </li>
+          <li>
+            <span>
+              おふたりの間で何通でも<br>
+              メッセージのやり取りができます
+            </span>
+            <img src="img/person.png" alt="" height="100">
+          </li>
+        </ul>
+      </section>
+
+      <section class="base_section_style">
+        <h2>お支払い方法</h2>
+        <table class="table_color_red">
+          <tbody>
+            <th>
+              お支払い方法
+            </th>
+            <tr>
+              <td>クレジットカード</td>
+            </tr>
+            <tr>
+              <td>コンビニ (ビットキャッシュ)</td>
+            </tr>
+            <tr>
+              <td>銀行振込み</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="base_section_style">
+        <h2>ポイント表</h2>
+        <table class="point_table">
+          <tbody>
+            <th colspan="2">
+              ポイント表
+            </th>
+            <tr>
+              <td>1,000円</td>
+              <td>100P</td>
+            </tr>
+            <tr>
+              <td>2,000円</td>
+              <td>200P+10S</td>
+            </tr>
+            <tr>
+              <td>3,000円</td>
+              <td>300P+20S</td>
+            </tr>
+            <tr>
+              <td>5,000円</td>
+              <td>500P+50S</td>
+            </tr>
+            <tr>
+              <td>10,000円</td>
+              <td>1,000P+150S</td>
+            </tr>
+            <tr>
+              <td>20,000円</td>
+              <td>2,000P+400S</td>
+            </tr>
+            <tr>
+              <td>30,000円</td>
+              <td>3,000P+600S</td>
+            </tr>
+            <tr>
+              <td>40,000円</td>
+              <td>4,000P+1,000S</td>
+            </tr>
+            <tr>
+              <td>50,000円</td>
+              <td>5,000P+1,500S</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="sub_font">
+          ※Sはサービスポイントになります。<br>
+          ※ポイントはサービスポイントから優先的に引かれます。
+        </p>
+      </section>
+
+    </section>
+
+  </div>
+</section>
+
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
