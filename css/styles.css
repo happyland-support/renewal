@@ -126,7 +126,7 @@ a {
 .main_btn {
   all: unset;
   margin-top: 12px;
-  width: 40%;
+  width: 100%;
   padding: 8px 0;
   background-color: var(--main_button_color);
   border-radius: 4px;
@@ -151,7 +151,7 @@ a {
 .gray_btn {
   all: unset;
   margin-top: 12px;
-  width: 40%;
+  width: 100%;
   padding: 8px 0;
   background-color: var(--gray_button_color);
   border-radius: 4px;
@@ -172,7 +172,7 @@ a {
 .green_btn {
   all: unset;
   margin-top: 12px;
-  width: 40%;
+  width: 100%;
   padding: 8px 0;
   background-color: var(--base_color);
   border-radius: 4px;
@@ -1104,7 +1104,7 @@ footer small {
 }
 
 .system li {
-  font-size: 14px;
+  /* font-size: 14px; */
   padding: 25px 8px;
   border: 1px solid #aaa;
   border-radius: 18px;
@@ -1565,8 +1565,7 @@ h3.mail_title_detail {
 }
 
 .payment .select {
-  max-width: 300px;
-  margin: 12px auto 0;
+  margin: 16px auto 0;
 }
 
 .payment .text {
@@ -1574,10 +1573,10 @@ h3.mail_title_detail {
 }
 
 .payment input[type="text"] {
+  margin-top: 24px;
   box-sizing: border-box;
   width: 100%;
-  max-width: 300px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border: 1px solid #5a5a5a;
   border-radius: 4px;
   position: relative;
