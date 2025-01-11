@@ -1280,11 +1280,6 @@ footer small {
 
 /* entrance_email (メールアドレスで登録ページ) */
 
-.entrance_email p {
-  font-size: 14px;
-  color: #666;
-}
-
 .entrance_email .main_btn {
   margin-bottom: 16px;
   border-radius: 24px;
@@ -1293,7 +1288,7 @@ footer small {
 }
 
 .entrance_email .domain {
-  padding: 4px;
+  padding: 8px;
   border: 1px solid #aaa;
   border-radius: 4px;
 }
@@ -1487,13 +1482,16 @@ h3.mail_title_detail {
 /* diary (日記結果ページ) */
 
 .diary article {
-  display: flex;
-  gap: 12px;
-  padding: 16px;
   background-color: #fff;
+  padding: 16px;
 }
 
-.diary article > img {
+.diary article > div {
+  display: flex;
+  gap: 12px;
+}
+
+.diary article > div > img {
   border-radius: 50%;
   width: 65px;
   height: 65px;
@@ -1519,9 +1517,10 @@ h3.mail_title_detail {
 }
 
 .diary article li {
-  padding: 4px 12px;
+  padding: 8px 14px;
   border: 1px solid #aaa;
   border-radius: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -1683,6 +1682,24 @@ h3.mail_title_detail {
 
 .payment_credit .space {
   margin-top: 32px;
+}
+
+/* ポイントゲット */
+
+.system input[type="text"] {
+  margin-top: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  position: relative;
+}
+
+.system input[type="text"]:focus {
+  box-shadow: 0 0 4px 0 var(--footer_text_color);
+  border: 1px solid #fff;
+  outline: 0;
 }
 
 /* sitemail (サイトメールページ) */
