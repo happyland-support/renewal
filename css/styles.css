@@ -78,11 +78,18 @@ a {
   color: var(--gray_button_shadow_color);
 }
 
-/* 余白 */
+/* 小さな　余白 */
 
 .space {
   margin-top: 8px;
 }
+
+/* ボタン上のスペース */
+
+.btn_top_space {
+  margin-top: 24px;
+}
+
 
 .container {
   /* outline: 1px solid red; */
@@ -882,7 +889,7 @@ a {
 }
 
 .top_menu li span {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* 通知マーク */
