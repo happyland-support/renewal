@@ -1104,6 +1104,7 @@ footer small {
 }
 
 .system li {
+  font-size: 14px;
   padding: 25px 8px;
   border: 1px solid #aaa;
   border-radius: 18px;
