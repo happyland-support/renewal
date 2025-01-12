@@ -1440,8 +1440,9 @@ footer small {
 .edit {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 4px;
-  color: var(--main_button_color);
+  align-items: baseline;
+  margin-bottom: 6px;
+  color: var(--caution_color);
   cursor: pointer;
 }
 
