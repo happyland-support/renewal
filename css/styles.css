@@ -1745,7 +1745,7 @@ h3.mail_title_detail {
 
 .sitemail li.box_left p {
   position: relative;
-  width: 60%;
+  width: 75%;
   margin-bottom: 24px;
   padding: 10px;
   border-radius: 8px;
@@ -1754,7 +1754,7 @@ h3.mail_title_detail {
 
 .sitemail li.box_right p {
   position: relative;
-  width: 60%;
+  width: 75%;
   margin-bottom: 24px;
   padding: 10px;
   border-radius: 8px;
@@ -1827,8 +1827,8 @@ h3.mail_title_detail {
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  right: -70px;
-  bottom: 4px;
+  right: 5px;
+  bottom: -20px;
 }
 
 .sitemail .box_right p span.sitemailBox_info {
@@ -1836,8 +1836,8 @@ h3.mail_title_detail {
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  left: -70px;
-  bottom: 4px;
+  left: 5px;
+  bottom: -20px;
 }
 
 .sitemail .box_left p.finish {
@@ -1850,7 +1850,7 @@ h3.mail_title_detail {
 
 .sitemail .caution {
   position: relative;
-  width: 60%;
+  width: 75%;
   padding: 8px;
   margin: 16px auto;
   border: 2px solid var(--caution_color);;
@@ -1870,8 +1870,8 @@ h3.mail_title_detail {
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  right: -70px;
-  bottom: 4px;
+  right: 5px;
+  bottom: -15px;
 }
 
 .sitemail .caution button {
@@ -1913,8 +1913,9 @@ h3.mail_title_detail {
 .sitemail .send {
   width: 15%;
   max-width: 100px;
-  font-size: 12px;
-  padding: 10px 12px;
+  height: 40px;
+  font-size: 11px;
+  padding: 4px;
   border: 1px solid #99857d;
   border-radius: 8px;
   background-color: #fff;
