@@ -195,6 +195,26 @@ a {
 }
 
 
+/* 各種パーツ sub_btn */
+
+.sub_btn {
+  all: unset;
+  width: 50%;
+  padding: 8px 0;
+  background-color: var(--main_button_color);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.sub_btn:hover {
+  opacity: .8;
+}
+
+
 /* 各種パーツ タブメニュー tabs */
 
 /* .tabs {
@@ -346,7 +366,7 @@ a {
 /* 各種パーツ mail_list_style */
 
 .mail_list_style li {
-  padding: 12px 24px;
+  padding: 12px;
   background-color: #fff;
   color: #666;
   cursor: pointer;
@@ -359,7 +379,7 @@ a {
 
 .mail_list_style li a {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .mail_list_style li + li {
@@ -1112,8 +1132,8 @@ footer small {
 }
 
 .system li {
-  /* font-size: 14px; */
-  padding: 25px 8px;
+  font-size: 14px;
+  padding: 22px 8px;
   border: 1px solid #aaa;
   border-radius: 18px;
   text-align: center;
@@ -1687,6 +1707,14 @@ h3.mail_title_detail {
 }
 
 /* ポイントゲット */
+
+.system .remaining_point {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .system input[type="text"] {
   margin-top: 4px;
