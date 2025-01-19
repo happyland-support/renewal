@@ -94,6 +94,21 @@
 
 </header>
 
+<div id="dialog_confirm">
+  <div class="dialog_confirm_box">
+    <p>
+      3,000ポイントを購入します。<br>
+      よろしいでしょうか？
+    </p>
+    <div>
+      <button>購入する</button>
+      <button class="cancel">キャンセル</button>
+    </div>
+  </div>
+</div>
+
+<div id="popup_mask"></div>
+
 <section class="payment">
   <div class="container">
     <ul class="tabs">
@@ -105,7 +120,6 @@
 
       <section class="base_section_style">
         <h2>保有ポイント</h2>
-        <p class="text_center alert">3,000ポイントを購入しました</p>
         <p class="remaining_point">2,200ポイント</p>
       </section>
 
@@ -117,9 +131,17 @@
         </div>
         <div class="select">
           <select name="" id="">
-            <option value="3,000">3,000p</option>
-            <option value="8,000">8,000p</option>
-            <option value="15,000">15,000p</option>
+            <option value="1,500">1,500円 = 150p</option>
+            <option value="2,000">2,000円 = 200P</option>
+            <option value="3,000">3,000円 = 300P</option>
+            <option value="5,000">5,000円 = 600P</option>
+            <option value="8,000">8,000円 = 900P</option>
+            <option value="10,000">10,000円 = 1,300P</option>
+            <option value="15,000">15,000円 = 1,900P</option>
+            <option value="20,000">20,000円 = 2,700P</option>
+            <option value="25,000">25,000円 = 3,300P</option>
+            <option value="30,000">30,000円 = 4,100P</option>
+            <option value="50,000">50,000円 = 6,800P</option>
           </select>
         </div>
         <div class="btn_center">
@@ -142,9 +164,17 @@
         </p>
         <div class="select">
           <select name="" id="">
-            <option value="3,000">3,000p</option>
-            <option value="8,000">8,000p</option>
-            <option value="15,000">15,000p</option>
+            <option value="1,500">1,500円 = 150p</option>
+            <option value="2,000">2,000円 = 200P</option>
+            <option value="3,000">3,000円 = 300P</option>
+            <option value="5,000">5,000円 = 600P</option>
+            <option value="8,000">8,000円 = 900P</option>
+            <option value="10,000">10,000円 = 1,300P</option>
+            <option value="15,000">15,000円 = 1,900P</option>
+            <option value="20,000">20,000円 = 2,700P</option>
+            <option value="25,000">25,000円 = 3,300P</option>
+            <option value="30,000">30,000円 = 4,100P</option>
+            <option value="50,000">50,000円 = 6,800P</option>
           </select>
         </div>
         <div class="btn_center">
@@ -172,9 +202,17 @@
         </div>
         <div class="select">
           <select name="" id="">
-            <option value="3,000">3,000p</option>
-            <option value="8,000">8,000p</option>
-            <option value="15,000">15,000p</option>
+            <option value="1,500">1,500円 = 150p</option>
+            <option value="2,000">2,000円 = 200P</option>
+            <option value="3,000">3,000円 = 300P</option>
+            <option value="5,000">5,000円 = 600P</option>
+            <option value="8,000">8,000円 = 900P</option>
+            <option value="10,000">10,000円 = 1,300P</option>
+            <option value="15,000">15,000円 = 1,900P</option>
+            <option value="20,000">20,000円 = 2,700P</option>
+            <option value="25,000">25,000円 = 3,300P</option>
+            <option value="30,000">30,000円 = 4,100P</option>
+            <option value="50,000">50,000円 = 6,800P</option>
           </select>
         </div>
         <div class="btn_center">
@@ -202,42 +240,37 @@
             <tr>
               <td>2022/08/12</td>
               <td>ポイント購入</td>
-              <td>8000</td>
+              <td>900P</td>
             </tr>
             <tr>
               <td>2022/08/12</td>
               <td>連絡先交換</td>
-              <td>-1000</td>
+              <td>-100P</td>
             </tr>
             <tr>
               <td>2022/08/14</td>
               <td>メール開通</td>
-              <td>-2500</td>
+              <td>-250P</td>
             </tr>
             <tr>
               <td>2022/08/12</td>
               <td>ポイント購入</td>
-              <td>8000</td>
+              <td>600P</td>
             </tr>
             <tr>
               <td>2022/08/12</td>
               <td>ポイント購入</td>
-              <td>8000</td>
+              <td>600P</td>
             </tr>
             <tr>
               <td>2022/08/12</td>
               <td>ポイント購入</td>
-              <td>8000</td>
-            </tr>
-            <tr>
-              <td>2022/08/01</td>
-              <td>年齢認証</td>
-              <td>-100</td>
+              <td>300P</td>
             </tr>
             <tr>
               <td>2022/08/12</td>
               <td>ポイント購入</td>
-              <td>8000</td>
+              <td>100P</td>
             </tr>
           </tbody>
         </table>
