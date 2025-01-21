@@ -78,10 +78,16 @@ a {
   color: var(--gray_button_shadow_color);
 }
 
-/* 小さな　余白 */
+/* 小さな 余白 */
 
 .space {
   margin-top: 8px;
+}
+
+/* 大きな 余白 */
+
+.big_space {
+  margin-top: 64px;
 }
 
 /* ボタン上のスペース */
@@ -449,6 +455,7 @@ a {
 .search_form th {
   font-size: 14px;
   font-weight: normal;
+  color: #666;
 }
 
 .search_form .table_select {
@@ -490,13 +497,15 @@ a {
 
 .pre_registration li {
   box-sizing: border-box;
-  background-color: var(--gray_button_color);
+  background-color: #fff;
   border: 2px solid #999;
-  border-radius: 32px;
+  border-radius: 8px;
   width: 100%;
   min-width: 200px;
   padding: 8px 16px;
-  font-size: 24px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
 }
 
@@ -505,18 +514,33 @@ a {
 }
 
 .pre_registration li.selected {
-  color: #fff;
-  border: 2px solid var(--base_color);
-  background-color: var(--base_color);
+  border: 2px solid var(--main_button_color);
 }
 
 .pre_registration li i {
-  margin-right: 8px;
+  font-size: 24px;
+  vertical-align: bottom;
+  color: var(--main_button_color);
 }
 
-.pre_registration select {
+/* .pre_registration select {
   width: 80px;
   padding: 8px 12px;
+} */
+
+.pre_registration input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  position: relative;
+}
+
+.pre_registration input[type="text"]:focus {
+  box-shadow: 0 0 4px 0 var(--footer_text_color);
+  border: 1px solid #fff;
+  outline: 0;
 }
 
 /* 各種パーツ プロフィール　フォーム　profile_form */
@@ -1132,7 +1156,7 @@ footer small {
 }
 
 .system li {
-  font-size: 14px;
+  font-size: 15px;
   padding: 22px 8px;
   border: 1px solid #aaa;
   border-radius: 18px;
@@ -1435,8 +1459,6 @@ footer small {
   margin-top: 12px;
 }
 
-
-
 /* 
 .green_btn {
   all: unset;
@@ -1575,6 +1597,24 @@ h3.mail_title_detail {
   background-color: var(--main_button_color);
 }
 
+/* お相手自動紹介 */
+
+.autointro .mail_list_style li {
+  border: 1px solid #ccc;
+}
+
+.autointro .mail_list_style li a span:nth-of-type(1) {
+  width: 60%;
+}
+
+.autointro .mail_list_style li a span:nth-of-type(2) {
+  width: 20%;
+}
+
+.autointro .mail_list_style li a span:nth-of-type(3) {
+  width: 20%;
+}
+
 /* payment (ポイント購入・履歴ページ) */
 
 .payment .remaining_point {
@@ -1650,29 +1690,24 @@ h3.mail_title_detail {
   text-align: center;
 }
 
-/* クレジット決済ページ */
+/* クレジット決済 */
 
-.payment_credit dl {
+.payment_credit .fee {
   display: flex;
-  width: 100%;
-  align-items: baseline;
+  gap: 48px;
 }
 
-.payment_credit dt {
-  text-align: right;
-  width: 25%;
-  /* padding-top: 8px; */
-  font-size: 13px;
-}
-
-.payment_credit dd {
-  width: 75%;
+.payment_credit img {
+  display: block;
+  width: 65%;
+  max-width: 250px;
+  margin-top: 4px;
 }
 
 .payment_credit input[type="text"] {
   box-sizing: border-box;
   width: 100%;
-  padding: 10px 15px;
+  padding: 15px;
   border: 1px solid #5a5a5a;
   border-radius: 4px;
 }
@@ -1684,7 +1719,7 @@ h3.mail_title_detail {
 }
 
 .payment_credit select {
-  width: 80px;
+  width: 100px;
   padding: 8px 12px;
 }
 
@@ -1693,17 +1728,31 @@ h3.mail_title_detail {
   gap: 8px;
 }
 
+.payment_credit .goodthru img {
+  width: 94px;
+  margin-top: 0;
+}
+
 .payment_credit .add {
   font-size: 10px;
   color: var(--gray_button_shadow_color);
 }
 
-.payment_credit input[type="text"].code {
-  width: 100px;
+.payment_credit .security div {
+  display: flex;
+  gap: 8px;
 }
 
-.payment_credit .space {
-  margin-top: 32px;
+.payment_credit .security input[type="text"] {
+  width: 40%;
+}
+
+.payment_credit .security img {
+  display: inline;
+  margin-top: 0;
+  vertical-align: baseline;
+  width: 75px;
+  height: 50px;
 }
 
 /* ポイントゲット */
