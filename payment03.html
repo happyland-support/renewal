@@ -96,102 +96,57 @@
 
 <section class="payment_credit">
   <div class="container">
-
-    <section class="point active" id="buy">
-
-      <section class="base_section_style">
-        <h2>クレジット決済</h2>
-        <dl>
-          <dt>
-            利用料金
-          </dt>
-          <dd>
-            <p>3,000円</p>
-          </dd>
-        </dl>
-        <!-- <dl>
-          <dt>
-            電話番号
-          </dt>
-          <dd>
-            <input type="text" placeholder="半角数字(ハイフンなし)">
-          </dd>
-        </dl> -->
-        <dl>
-          <dt>
-            カード番号
-          </dt>
-          <dd>
-            <input type="text" placeholder="半角英数(ハイフン・スペースなし)">
-            <div class="pic" style="margin-top:4px;">
-              <img src="img/cc_img.png" alt="" width="150" height="19">
-            </div>
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            カード名義
-          </dt>
-          <dd>
-            <input type="text" placeholder="半角英数(「-」「/」など記号や数字は入力できません)">
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            カード有効期限
-          </dt>
-          <dd>
-            <div class="goodthru">
-              <select name="" id="">
-                <option value="month">月</option>
-              </select>
-              <select name="" id="">
-                <option value="year">年</option>
-              </select>
-              <img src="img/credit_goodthru.gif" alt="" width="94" height="39">
-            </div>
-            <p class="add">カードの有効期限は通常、「月/年(西暦下２桁)」で刻印されています</p>
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            セキュリティコード
-          </dt>
-          <dd>
-            <div class="goodthru">
-              <input type="text" placeholder="半角数字" class="code">
-              <img src="img/credit_security.gif" alt="" width="67" height="42">
-            </div>
-            <p class="add">主にカード裏面のご署名欄に印刷されている３桁、もしくは４桁の数字です</p>
-          </dd>
-        </dl>
-        <div class="btn_center">
-          <button class="main_btn">購入する</button>
+    <div class="base_section_style">
+      <h2>クレジット決済</h2>
+      <div class="fee">
+        <p>利用料金</p>
+        <p>3,000円</p>
+      </div>
+      <p class="sub_font space">カード番号</p>
+      <input type="text" placeholder="半角英数(ハイフン・スペースなし)" class="e-mail">
+      <img src="img/cc_img.png" alt="">
+      <p class="sub_font space">カード名義</p>
+      <input type="text" placeholder="半角英数(「-」「/」など記号や数字は入力できません)" class="e-mail">
+      <p class="sub_font space">カード有効期限</p>
+      <div class="goodthru">
+        <select name="" id="">
+          <option value="month">月</option>
+        </select>
+        <select name="" id="">
+          <option value="year">年</option>
+        </select>
+        <img src="img/credit_goodthru.gif" alt="" width="94" height="39">
+      </div>
+      <p class="add">カードの有効期限は通常、「月/年(西暦下２桁)」で刻印されています</p>
+      <div class="security">
+        <p class="sub_font space">セキュリティコード</p>
+        <div>
+          <input type="text" placeholder="半角英数" class="e-mail">
+          <img src="img/credit_security.gif" alt="" width="75" height="50">
         </div>
-      </section>
-
-      <section class="base_section_style">
-        <h2>個人情報の取り扱いについて</h2>
-        <p class="small_font">
-          ご提供頂きました個人情報は、「個人情報保護に関して」に従って取り扱います。<br>
-          記載事項以外の求める関係に使用されることはございません。
-        </p>
-        <p class="space">
-          個人情報の取り扱い、苦情、及びご相談はこちらにご連絡ください。
-        </p>
-        <fieldset>
-          <legend>問合せ先</legend>
-          <div class="text_center">
-            株式会社AXES Payment<br>
-            0570-03-600<br>
-            カスタマーサポート(24時間365日)
-          </div>
-        </fieldset>
-      </section>
-
-
+      </div>
+      <div class="btn_center">
+        <button class="main_btn">購入する</button>
+      </div>
+    </div>
+    <section class="base_section_style">
+      <h2>個人情報の取り扱いについて</h2>
+      <p class="small_font">
+        ご提供頂きました個人情報は、「個人情報保護に関して」に従って取り扱います。<br>
+        記載事項以外の求める関係に使用されることはございません。
+      </p>
+      <p class="space">
+        個人情報の取り扱い、苦情、及びご相談はこちらにご連絡ください。
+      </p>
+      <fieldset>
+        <legend>問合せ先</legend>
+        <div class="text_center">
+          株式会社AXES Payment<br>
+          0570-03-600<br>
+          カスタマーサポート(24時間365日)
+        </div>
+      </fieldset>
     </section>
-
   </div>
 </section>
 
