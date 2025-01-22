@@ -523,6 +523,44 @@ a {
   color: var(--main_button_color);
 }
 
+.birth_day .select {
+  display: inline-block;
+  text-align: right;
+}
+
+.birth_day .select:nth-child(1) {
+  width: 45%;
+}
+
+.birth_day .select:nth-child(2) {
+  width: 25%;
+}
+
+.birth_day .select:nth-child(3) {
+  width: 25%;
+}
+
+/* 好きなこと */
+
+.pre_registration .hobby li {
+  all: unset;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pre_registration .hobby li.selected {
+  border: 2px solid var(--main_button_color);
+  background-color: var(--main_button_color);
+  color: #fff;
+}
+
 /* .pre_registration select {
   width: 80px;
   padding: 8px 12px;
@@ -541,6 +579,14 @@ a {
   box-shadow: 0 0 4px 0 var(--footer_text_color);
   border: 1px solid #fff;
   outline: 0;
+}
+
+.pre_registration textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 8px;
 }
 
 /* 各種パーツ プロフィール　フォーム　profile_form */
@@ -658,6 +704,7 @@ a {
   border: 1px solid var(--base_color);
   border-radius: 24px;
   color: var(--base_color);
+  font-size: 14px;
   text-align: center;
   cursor: pointer;
   transition: opacity .3s;
@@ -943,7 +990,7 @@ a {
   position: relative;
 }
 
-.top_menu .notice div {
+.top_menu .notice .dot {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -951,7 +998,6 @@ a {
   height: 10px;
   border-radius: 50%;
   background-color: var(--caution_color);
-  /* background-color: var(--main_button_color); */
 }
 
 /* mask */
@@ -1697,10 +1743,10 @@ h3.mail_title_detail {
   gap: 48px;
 }
 
-.payment_credit img {
+.payment_credit .card_brand {
   display: block;
-  width: 65%;
-  max-width: 250px;
+  width: 60%;
+  max-width: 200px;
   margin-top: 4px;
 }
 
@@ -1718,19 +1764,18 @@ h3.mail_title_detail {
   outline: 0;
 }
 
-.payment_credit select {
-  width: 100px;
-  padding: 8px 12px;
+.payment_credit .select {
+  margin: 0;
+  width: 85px;
+  display: inline-block;
+  text-align: right;
+  border: 1px solid #5a5a5a;
 }
 
-.payment_credit .goodthru {
-  display: flex;
-  gap: 8px;
-}
-
-.payment_credit .goodthru img {
-  width: 94px;
-  margin-top: 0;
+.payment_credit .card_goodthru {
+  width: 92px;
+  height: 38px;
+  vertical-align: bottom;
 }
 
 .payment_credit .add {
@@ -1738,21 +1783,14 @@ h3.mail_title_detail {
   color: var(--gray_button_shadow_color);
 }
 
-.payment_credit .security div {
-  display: flex;
-  gap: 8px;
-}
-
 .payment_credit .security input[type="text"] {
   width: 40%;
 }
 
-.payment_credit .security img {
-  display: inline;
-  margin-top: 0;
-  vertical-align: baseline;
-  width: 75px;
-  height: 50px;
+.payment_credit .card_security {
+  width: 72px;
+  height: 48px;
+  vertical-align: bottom;
 }
 
 /* ポイントゲット */
@@ -1886,8 +1924,8 @@ h3.mail_title_detail {
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  right: -35px;
-  bottom: 18px;
+  right: 75px;
+  bottom: -22px;
 }
 
 .sitemail .box_right p span.sitemailBox_read {
@@ -1895,8 +1933,8 @@ h3.mail_title_detail {
   margin-top: 7px;
   font-size: .8em;
   position: absolute;
-  left: -35px;
-  bottom: 18px;
+  left: 75px;
+  bottom: -22px;
 }
 
 .sitemail .box_left p span.sitemailBox_info {
@@ -1905,7 +1943,7 @@ h3.mail_title_detail {
   font-size: .8em;
   position: absolute;
   right: 5px;
-  bottom: -20px;
+  bottom: -21px;
 }
 
 .sitemail .box_right p span.sitemailBox_info {
@@ -1914,7 +1952,7 @@ h3.mail_title_detail {
   font-size: .8em;
   position: absolute;
   left: 5px;
-  bottom: -20px;
+  bottom: -21px;
 }
 
 .sitemail .box_left p.finish {
