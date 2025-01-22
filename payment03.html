@@ -27,11 +27,12 @@
           <span>さがす</span>
         </a>
       </li>
-      <li>
+      <li class="notice">
         <a href="mail.html">
           <i class="bi bi-chat-dots"></i>
           <span>メッセージ</span>
         </a>
+        <div class="dot"></div>
       </li>
       <li>
         <a href="favorite.html">
@@ -96,6 +97,7 @@
 
 <section class="payment_credit">
   <div class="container">
+
     <div class="base_section_style">
       <h2>クレジット決済</h2>
       <div class="fee">
@@ -104,31 +106,38 @@
       </div>
       <p class="sub_font space">カード番号</p>
       <input type="text" placeholder="半角英数(ハイフン・スペースなし)" class="e-mail">
-      <img src="img/cc_img.png" alt="">
+      <img src="img/cc_img.png" alt="" class="card_brand">
       <p class="sub_font space">カード名義</p>
       <input type="text" placeholder="半角英数(「-」「/」など記号や数字は入力できません)" class="e-mail">
       <p class="sub_font space">カード有効期限</p>
       <div class="goodthru">
-        <select name="" id="">
-          <option value="month">月</option>
-        </select>
-        <select name="" id="">
-          <option value="year">年</option>
-        </select>
-        <img src="img/credit_goodthru.gif" alt="" width="94" height="39">
+        <div class="select">
+          <select name="" id="">
+            <option value="month">月</option>
+          </select>
+        </div>
+        <div class="select">
+          <select name="" id="">
+            <option value="year">年</option>
+          </select>
+        </div>
+        <img src="img/credit_goodthru.gif" alt="" width="94" height="39" class="card_goodthru">
       </div>
       <p class="add">カードの有効期限は通常、「月/年(西暦下２桁)」で刻印されています</p>
       <div class="security">
         <p class="sub_font space">セキュリティコード</p>
         <div>
           <input type="text" placeholder="半角英数" class="e-mail">
-          <img src="img/credit_security.gif" alt="" width="75" height="50">
+          <img src="img/credit_security.gif" alt="" width="72" height="48" class="card_security">
         </div>
       </div>
+      <!-- <p class="sub_font space">電話番号</p>
+      <input type="text" placeholder="半角数字(ハイフンなし)" class="e-mail"> -->
       <div class="btn_center">
         <button class="main_btn">購入する</button>
       </div>
     </div>
+
     <section class="base_section_style">
       <h2>個人情報の取り扱いについて</h2>
       <p class="small_font">
@@ -147,6 +156,7 @@
         </div>
       </fieldset>
     </section>
+
   </div>
 </section>
 
