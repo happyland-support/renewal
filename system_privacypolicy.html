@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>検索ページ</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li class="notice">
+        <a href="mail.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+        <div class="dot"></div>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <i class="bi bi-heart"></i>
+          <span>いいね</span>
+        </a>
+      </li>
+      <li>
+        <a href="diary.html">
+          <i class="bi bi-calendar3"></i>
+          <span>日記</span>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-list"></i>
+          <span>メニュー</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="system_privacypolicy">
+  <div class="container">
+    <section class="base_section_style">
+      <h2>プライバシーポリシー</h2>
+      <p>
+        株式会社鳩山実業（以下、「当社」といいます。）は、TRUSTeプライバシー・プログラムのライセンシーです。このプライバシーポリシーは、当社の運営するウェブサイト「ハッピーランド」における個人情報の取扱いについて皆様にお知らせするものです。TRUSTeは独立した組織であり、そのミッションは公正な情報使用の促進によって、ユーザー様のインターネットに対する信用と信頼を築く事です。このプライバシーポリシーは、ハッピーランドにおける皆様の個人情報の利用目的を公約として明示するものであり、当社はこの公約の遵守を確実なものとするために、下記の項目を開示すること、その遵守状況をTRUSTeによって調査を受けることに同意しています。
+      </p>
+      <img src="img/truste.png" alt="">
+      <ol>
+        <li>1.個人情報の定義</li>
+        <li>2.個人の権利の尊重</li>
+        <li>3.個人情報の収集と利用</li>
+        <li>4.情報の委託について</li>
+        <li>5.アクセスログ</li>
+        <li>6.クッキー</li>
+        <li>7.リンク</li>
+        <li>8.セキュリティについて</li>
+        <li>9.免責条項について</li>
+        <li>10.当社の個人情報の取り扱い方針の変更について</li>
+        <li>11.SSL通信(暗号化通信)について</li>
+      </ol>
+      <p>
+        ハッピーランドにおけるの個人情報の取扱いに関して疑問を感じられた場合には、お客様相談窓口（Email: info@h-p.tv）にご連絡ください。また、当社の対応に満足されない場合にはTRUSTe (https://www.truste.or.jp/hssl/watchdog)にご連絡ください。その場合TRUSTeは、ウェブサイトとの連絡役として、皆様のご懸念を解決するための手続きを行います。
+      </p>
+      <h3>個人情報の定義</h3>
+      <p>
+        個人情報とは、それによって直接個人が特定され得る情報（氏名・住所・電話番号・ emailアドレス・性別・生年月日・年齢など）とその情報だけでは個人を識別できなくても、他の情報と容易に照合することができ、それにより特定の個人を識別できる情報（趣味嗜好・興味ある分野など）を指します。当社は、サービスの適切な提供を目的として、ご本人の同意を得た上で、ユーザー様からこれらの個人情報を収集致します。
+      </p>
+      <h3>個人の権利の尊重</h3>
+      <p>
+        個人情報は、ユーザー様に帰属するものです。ハッピーランドを通してお預かりした個人情報は、当社の事業上の秘密情報と同等のレベルにおいて秘密に保持されるものとし、取扱いには十分注意して、ここに示すプライバシーポリシーに準拠して業務を行っております。
+      </p>
+      <h3>個人情報の収集と利用</h3>
+      <p>
+        当社はハッピーランドからの会員登録、会員ページログイン、イベント参加、その他各種お問合せフォームにおいてユーザー様から個人情報を収集しています。収集した情報は、当社からの連絡、お問合せへの返答等、ハッピーランドの運営に必要とする目的の為に利用します。また、本ウェブサイトのプライバシーポリシーに開示されている内容と異なる方法での共有等は行わず、さらに収集した情報に他の情報源からの情報を補足するといったことも行いません。
+        ※ユーザー様によるハッピーランドご利用による個人情報について
+        ハッピーランドでは会員登録を行うサービスがあり、会員情報の一部はハッピーランド上でユーザー会員様が閲覧可能な状態になります。これらの機能を利用するにあたり、登録された会員様は、当社の利用規約等の主旨をご理解・同意のうえ、自らの責任においてご利用ください。チャット等の利用においても、当社での監視、管理者権限による削除等の措置を取ることがありますが、ご利用者の皆様の個人情報の取り扱いには十分注意して頂くようお願いいたします。
+      </p>
+      <h3>情報の委託について</h3>
+      <p>
+        当社は配送物の配送には外部の運送業者を使用し、サービスの提供に対する料金請求にはクレジット処理会社を使用する場合があります。また当社は､その他必要なサービスの提供の為、業務を委託する場合があります。委託業者に対しては、契約により厳格な個人情報の管理と守秘を義務づけ、サービスの提供に必要となる範囲内で個人情報の委託を行い、必要となる範囲を超えた個人情報の使用を許可いたしません。
+      </p>
+      <h3>アクセスログ</h3>
+      <p>
+        当社は 傾向の分析、サイトの管理､ユーザー様全体の動向の把握､およびユーザービリティーの向上を目的として、アクセスログを分析いたします。アクセスログには、個人情報は含まれておらず、また、アクセスログを個人を特定し得る情報にリンクすることもございません。
+      </p>
+      <h3>クッキー</h3>
+      <p>
+        このウェブサイトでは、一部クッキーを使用していますが、サービス提供を目的としたもので、個人の動向を探知したり、個人特定情報にリンクされることはありません。また、アクセス解析のため、他社クッキーやウェブビーコンなどを利用する場合があります。その際に個人の動向を探知したり、個人特定情報にリンクされることはありません。
+        また、ハッピーランドではヤフー株式会社を始めとする第三者から配信される広告が掲載される場合があり、これに関連して、当該第三者が、ハッピーランドを訪問したユーザーのクッキー情報等を取得し、利用している場合があります。当該第三者によって取得されたクッキー情報等は、当該第三者のプライバシーポリシーに従って取り扱われます。ユーザーは、当該第三者のウェブサイト内に設けられたオプトアウトページにアクセスして、当該第三者によるクッキー情報等の広告配信への利用を停止することができます。
+        クッキーとは、ウェブページを利用したときに、ブラウザとサーバーとの間で送受信した利用履歴や入力内容などを、お客様のコンピュータにファイルとして保存しておく仕組みです。次回、同じページにアクセスすると、クッキーの情報を使って、ページの運営者はお客様ごとに表示を変えたりすることができます。お客様がブラウザの設定でクッキーの送受信を許可している場合、ウェブサイトは、ユーザーのブラウザからクッキーを取得できます。なお、お客様のブラウザは、プライバシー保護のため、そのウェブサイトのサーバーが送受信したクッキーのみを送信します。すべてのクッキーを拒否する設定を選択されますと、認証が必要なサービスを受けられなくなる等、インターネット上の各種サービスの利用上、制約を受ける場合がありますのでご注意ください。
+      </p>
+      <h3>リンク</h3>
+      <p>
+        ハッピーランドは他社の運営するウェブサイトへのリンクを含んでいます。当社はそのような他社のウェブサイトにおける個人情報の取扱いについては、一切 責任を追いかねます。このプライバシーポリシーは当社の運営するハッピーランドにおいて収集される情報だけに適用されます。フレームやマスキングを使用している場合であっても同様といたします。
+      </p>
+      <h3>セキュリティについて</h3>
+      <p>
+        当社では、ハッピーランドの運用に関して、情報の損失、誤用、権限のないものからのアクセス、改ざん、漏洩等から保護するための対策を講じています。登録・問合せ、申込フォーム等から個人情報を入力する際、業界標準である Secure Socket Layer(SSL)を使用し、インターネット上で送信されるデータを暗号化することにより、傍受を防止しています。当社の従業員に関しましては、当社が定める個人情報保護に関するコンプライアンスプログラムやセキュリティポリシーに関して告知を行い、また社内での講習会等によって内容等を理解し、遵守することに努めています。
+      </p>
+      <h3>免責条項について</h3>
+      <p>
+        当社では、情報の提供者がリクエストしているサービス、回答、その他の当社側の対応の全部もしくは一部が当社より第三者の企業等へ業務委託されている場合を除いて、個人情報を第三者に開示することはございません。但し、裁判所、警察、税務署、消費者センター、その他の法律や条例などで認められた権限を持つ機関から法に基づく要請がある場合には、これに応じてご本人の許可なく情報を開示させていただくことがございます。
+      </p>
+      <h3>当社の個人情報の取り扱い方針の変更について</h3>
+      <p>
+        当社は、新サービスのリリースやサービス内容の変更などを理由にプライバシーポリシーを変更する場合があります。変更した場合は、ホームページに掲載し、お知らせいたします。ただし、当社は、収集した個人情報につき、ご本人の事前の承諾を得ることなく、収集時点におけるプライバシーポリシーを変更して適用することはございません。
+      </p>
+      <h3>SSL通信(暗号化通信)について</h3>
+      <p>
+        当サイトはお客さまの情報を安全に送受信するためSSL暗号化通信を行っております。出来るだけ、SSLに対応したブラウザをご利用ください。<br>
+        最終更新日：2020/12/01
+      </p>
+      <section class="tel_contact">
+        <p>
+          プライバシーポリシーに関するお問合せは<br>
+          info@h-p.tvまでご連絡ください。
+        </p>
+      </section>
+    </section>
+
+  </div>
+</section>
+
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_termsofuse.html">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_privacypolicy.html">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_tokusho.html">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_company.html">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
