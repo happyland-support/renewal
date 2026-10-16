@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/senior.css">
+  <title>検索ページ</title>
+</head>
+<body class="font_large">
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <button class="font_btn active">文字 <i class="bi bi-type"></i></button>
+        <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li class="notice">
+        <a href="mail.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+        <div class="dot"></div>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <i class="bi bi-heart"></i>
+          <span>いいね</span>
+        </a>
+      </li>
+      <li>
+        <a href="diary.html">
+          <i class="bi bi-calendar3"></i>
+          <span>日記</span>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-list"></i>
+          <span>メニュー</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header><div class="container"><div class="note_for_maker"><h1>【制作会社さまへ】文字の大きさ → 「大」にしたとき</h1><ul><li>「プロフィール → OK返事受信 → ポイントあり」（profile_08）を「大」で見たところ。</li><li>項目名（会員番号・年齢など）の薄い灰色は、濃くする（シニアには読みにくい）。</li></ul></div></div>
+
+<section class="profile">
+  <div class="container">
+    <h2>さやか<span>年齢認証済</span></h2>
+    <section class="base_section_style">
+      <div class="text_center">
+        <img src="img/photo01.png" alt="">
+      </div>
+      <div class="primary_box">
+        <p>残りポイント 450</p>
+        <button class="main_button">メール開通する</button>
+      </div>
+      <table class="profile_form">
+        <tbody>
+          <tr>
+            <th>会員番号</th>
+            <td>F510003</td>
+          </tr>
+          <tr>
+            <th>年齢</th>
+            <td>62歳</td>
+          </tr>
+          <tr>
+            <th>都道府県</th>
+            <td>神奈川県</td>
+          </tr>
+          <tr>
+            <th>市区町村</th>
+            <td>横浜市</td>
+          </tr>
+          <tr>
+            <th>身長</th>
+            <td>153cm</td>
+          </tr>
+          <tr>
+            <th>体型</th>
+            <td>普通</td>
+          </tr>
+          <tr>
+            <th>血液型</th>
+            <td>AB型</td>
+          </tr>
+          <tr>
+            <th>星座</th>
+            <td>おうし座</td>
+          </tr>
+          <tr>
+            <th>結婚歴</th>
+            <td>離別</td>
+          </tr>
+          <tr>
+            <th>最終学歴</th>
+            <td>高校卒</td>
+          </tr>
+          <tr>
+            <th>職業</th>
+            <td>製造・加工業</td>
+          </tr>
+          <tr>
+            <th>年収</th>
+            <td>300万円</td>
+          </tr>
+          <tr>
+            <th>お酒</th>
+            <td>飲む</td>
+          </tr>
+          <tr>
+            <th>タバコ</th>
+            <td>電子タバコ</td>
+          </tr>
+          <tr>
+            <th>続柄</th>
+            <td>長女</td>
+          </tr>
+          <tr>
+            <th>子供</th>
+            <td>いる/別居</td>
+          </tr>
+          <tr>
+            <th>自分の親と同居</th>
+            <td>必要なし</td>
+          </tr>
+          <tr>
+            <th>相手の親と同居</th>
+            <td>どちらでも</td>
+          </tr>
+          <tr>
+            <th>現在の住居１</th>
+            <td>賃貸</td>
+          </tr>
+          <tr>
+            <th>現在の住居２</th>
+            <td>マンション</td>
+          </tr>
+          <tr>
+            <th>メールタイプ</th>
+            <td>スマホ</td>
+          </tr>
+          <tr>
+            <th>最終ログイン</th>
+            <td>2022/10/03</td>
+          </tr>
+          <tr>
+            <th>求める関係</th>
+            <td>恋愛、婚活、友達</td>
+          </tr>
+          <tr>
+            <th>好きなこと</th>
+            <td>旅行、カラオケ、温泉、野球観戦</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="profile_btns">
+        <div>
+          日記
+        </div>
+        <!-- <div>
+          サークル
+        </div>
+        <div>
+          プライベート質問
+        </div> -->
+      </div>
+      <p class="profile_comment">
+        初めまして！<br>
+        明るくて、優しい性格と言われます。<br>
+        仕事は製造業をしており、休みは土日祝です。<br>
+        仲良くなったら、一緒にカラオケや旅行に行ってみたいです。<br>
+        よろしくお願いします。
+      </p>
+      <!-- <button class="main_button">申込む</button> -->
+      <div class="message_box">
+        <h1>申込みメッセージ</h1>
+        <p>
+          申込みメッセージです。申込みメッセージです。申込みメッセージです。申込みメッセージです。申込みメッセージです。申込みメッセージです。申込みメッセージです。申込みメッセージです。申込みメッセージです。
+        </p>
+        <h1>OK返事メッセージ</h1>
+        <p>
+          OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。OK返事メッセージです。
+        </p>
+      </div>
+      <div class="sub_buttons">
+        <button>いいね <i class="bi bi-heart"></i></button>
+        <button>ブロックする</button>
+      </div>
+    </section>
+  </div>
+</section>
+
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_termsofuse.html">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_privacypolicy.html">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_tokusho.html">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_company.html">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

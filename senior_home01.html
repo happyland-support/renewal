@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/senior.css">
+  <title>検索ページ</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li class="notice">
+        <a href="mail.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+        <div class="dot"></div>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <i class="bi bi-heart"></i>
+          <span>いいね</span>
+        </a>
+      </li>
+      <li>
+        <a href="diary.html">
+          <i class="bi bi-calendar3"></i>
+          <span>日記</span>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-list"></i>
+          <span>メニュー</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+  <section class="todo">
+    <div class="container">
+      <div class="note_for_maker"><h1>【制作会社さまへ】ホーム（今やること）</h1><ul><li>ログインしたら、最初にこの画面を出す（今は「さがす」の画面）。上の「ハッピーランド」を押しても、ここに戻る。</li><li>「OKの返事」「申込み」「いいね」など、<b>次にやることを、急ぐ順に</b>カードで出す。期限のあるもの（OK返事は30日）は、残りの日数を赤で出す。</li><li>お金（ポイント）がかかるボタンの下には、<b>使うポイント・円での目安・残り</b>を出す。</li><li>下の「今日のおすすめ」は毎朝3人。趣味・地域・目的が合う人を選び、<b>選んだ理由</b>を1行出す（今の「お相手自動紹介」を画面の中心に出す形）。</li><li>名前・ボタンの文字は18px 以上。</li></ul></div>
+      <section class="base_section_style">
+        <h2>今やること</h2>
+        
+        <div class="todo_card">
+          <img src="img/photo01.png" alt="">
+          <div class="todo_text">
+            <strong>さやかさん</strong>（62歳・神奈川県）から<br><strong>OKの返事</strong>が届きました
+            <br><span class="limit">あと25日（11月10日まで）</span>
+          </div>
+        </div>
+        <button class="main_btn">メールのやり取りを始める</button>
+        <p class="cost">250ポイント（約2,500円）使います。残りは450ポイントです</p>
+
+        <div class="todo_card calm">
+          <div class="todo_icon"><i class="bi bi-envelope-heart"></i></div>
+          <div class="todo_text"><strong>2人</strong>から<strong>申込み</strong>が届いています<br><span class="sub">OKの返事は無料です</span></div>
+        </div>
+        <button class="green_btn">申込みを見る</button>
+
+        <div class="todo_card calm">
+          <div class="todo_icon"><i class="bi bi-heart-fill pink"></i></div>
+          <div class="todo_text"><strong>3人</strong>があなたに<strong>いいね</strong>しました</div>
+        </div>
+        <button class="green_btn">いいねした人を見る</button>
+
+      </section>
+      
+      <section class="base_section_style recommend">
+        <h2>今日のおすすめ（毎朝かわります）</h2>
+        <ul>
+          <li>
+            <img src="img/photo02.png" alt="">
+            <div class="who">
+              <strong>ゆりこさん</strong> 64歳・東京都
+              <div class="tags"><span>旅行</span><span>温泉</span><span>お茶飲み友達から</span></div>
+              <p class="reason">あなたと同じ「旅行」が好きです</p>
+            </div>
+            <button class="see">見る</button>
+          </li>
+          <li>
+            <img src="img/photo03.png" alt="">
+            <div class="who">
+              <strong>まさこさん</strong> 59歳・神奈川県
+              <div class="tags"><span>園芸</span><span>散歩</span><span>再婚を考えたい</span></div>
+              <p class="reason">お住まいが近い方です</p>
+            </div>
+            <button class="see">見る</button>
+          </li>
+          <li>
+            <img src="img/profile-image.png" alt="">
+            <div class="who">
+              <strong>けいこさん</strong> 61歳・千葉県
+              <div class="tags"><span>カラオケ</span><span>映画</span><span>趣味友を探しています</span></div>
+              <p class="reason">最近はじめた方です</p>
+            </div>
+            <button class="see">見る</button>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </section>
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_termsofuse.html">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_privacypolicy.html">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_tokusho.html">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_company.html">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
