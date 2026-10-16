@@ -89,6 +89,33 @@ section.cat .note { margin: 0; color: var(--muted); font-size: 14px; }
 .missing ul { margin: 0; padding-left: 1.2em; }
 .foot { color: var(--muted); font-size: 14px; margin: 0; }
 
+/* 画面を大きく見るポップアップ */
+#viewer { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+#viewer::backdrop { background: rgba(10, 18, 22, .9); }
+#viewer[open] { display: grid; grid-template-rows: auto 1fr auto; justify-items: center; gap: 10px; padding: 12px max(12px, env(safe-area-inset-right, 0px)) 14px max(12px, env(safe-area-inset-left, 0px)); box-sizing: border-box; }
+.v-head { width: min(560px, 100%); display: flex; gap: 10px; align-items: flex-start; color: #fff; }
+.v-title { flex: 1; min-width: 0; display: grid; line-height: 1.4; }
+.v-title b { font-weight: 400; font-size: 13px; opacity: .8; font-variant-numeric: tabular-nums; }
+.v-title span { font-size: 17px; font-weight: 700; }
+.v-title code { font-family: var(--mono); font-size: 12px; opacity: .75; }
+.v-body { display: flex; align-items: center; gap: 12px; min-height: 0; max-width: 100%; }
+.v-phone { width: min(430px, calc(100vw - 24px)); height: 100%; max-height: 932px; background: #efefef; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, .45); }
+.v-phone iframe { width: 100%; height: 100%; border: 0; display: block; background: #efefef; }
+#viewer button, #viewer a { font: inherit; cursor: pointer; }
+.v-close { all: unset; cursor: pointer; color: #fff; font-size: 26px; line-height: 1; padding: 4px 10px; border-radius: 8px; background: rgba(255, 255, 255, .14); }
+.v-nav { all: unset; cursor: pointer; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 22px; background: rgba(255, 255, 255, .16); flex-shrink: 0; }
+.v-nav:disabled, .v-foot button:disabled { opacity: .3; cursor: default; }
+.v-foot { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.v-foot button, .v-foot a { all: unset; cursor: pointer; padding: 9px 16px; border-radius: 10px; background: rgba(255, 255, 255, .16); color: #fff; font-size: 14px; font-weight: 700; }
+.v-foot a { background: var(--accent); }
+.v-close:hover, .v-nav:not(:disabled):hover, .v-foot button:not(:disabled):hover { background: rgba(255, 255, 255, .3); }
+.v-close:focus-visible, .v-nav:focus-visible, .v-foot button:focus-visible, .v-foot a:focus-visible { outline: 3px solid #ffb3b8; outline-offset: 2px; }
+.v-foot button { display: none; }
+@media (max-width: 640px) {
+  .v-nav { display: none; }
+  .v-foot button { display: inline-block; }
+}
+
 @media (max-width: 640px) {
   .list .card { grid-template-columns: 2.6em 1fr; }
   .list .card .meta { grid-column: 2; }

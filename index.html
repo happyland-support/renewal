@@ -12,7 +12,7 @@
     <div class="top">
       <span class="eyebrow">ハッピーランド リニューアルの見本</span>
       <h1>見本の目次</h1>
-      <p class="lead">画面を押すと、その画面が開きます。各画面の下の「見本ナビ」で、同じ分類の前・次の画面に移れます。</p>
+      <p class="lead">画面を押すと、その画面が大きく出ます（← → で同じ分類の前・次、Esc で閉じる）。開いた画面の下の「見本ナビ」でも、前・次の画面に移れます。</p>
       <div class="tools">
         <input id="q" type="search" placeholder="探す（例：OK返事、退会、payment）" aria-label="画面を探す">
         <div class="seg" role="group" aria-label="表示">
@@ -31,6 +31,22 @@
       <a href="pointget.html">ポイントゲット</a> ・ <a href="setting.html">各種設定</a> ・ <a href="system.html">システム・料金</a> ・ <a href="contact.html">お問合せ</a>
     </p>
   </div>
+  <dialog id="viewer" aria-label="画面を大きく見る">
+    <div class="v-head">
+      <div class="v-title"><b id="v-cat"></b><span id="v-label"></span><code id="v-file"></code></div>
+      <button type="button" class="v-close" id="v-close" aria-label="閉じる">×</button>
+    </div>
+    <div class="v-body">
+      <button type="button" class="v-nav" id="v-prev" aria-label="前の画面">←</button>
+      <div class="v-phone"><iframe id="v-frame" title="画面"></iframe></div>
+      <button type="button" class="v-nav" id="v-next" aria-label="次の画面">→</button>
+    </div>
+    <div class="v-foot">
+      <button type="button" id="v-prev2">← 前</button>
+      <a id="v-open" href="#" target="_blank" rel="noopener">このページを開く</a>
+      <button type="button" id="v-next2">次 →</button>
+    </div>
+  </dialog>
   <script src="js/catalog-data.js"></script>
   <script src="js/catalog.js"></script>
 </body>
