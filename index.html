@@ -2,290 +2,36 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
-  <meta name="viewport" content="width=device-width", initial-scale="1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>検索ページ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>見本の目次 | ハッピーランド リニューアル</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
-
-<header>
-
-  <div class="header_name">
-    <a href="index.html">
-      <h1>ハッピーランド</h1>
-    </a>
-    <span class="account-icon">M000000 あきら様</span>
+  <div class="wrap">
+    <div class="top">
+      <span class="eyebrow">ハッピーランド リニューアルの見本</span>
+      <h1>見本の目次</h1>
+      <p class="lead">画面を押すと、その画面が開きます。各画面の下の「見本ナビ」で、同じ分類の前・次の画面に移れます。</p>
+      <div class="tools">
+        <input id="q" type="search" placeholder="探す（例：OK返事、退会、payment）" aria-label="画面を探す">
+        <div class="seg" role="group" aria-label="表示">
+          <button id="mode-photo" type="button" aria-pressed="true">画面つき</button>
+          <button id="mode-list" type="button" aria-pressed="false">一覧</button>
+        </div>
+        <span class="count" id="count"></span>
+      </div>
+    </div>
+    <nav class="chips" id="chips" aria-label="分類"></nav>
+    <div id="cats"></div>
+    <div class="missing" id="missing"></div>
+    <p class="foot">各メニューの元の目次：
+      <a href="search.html">お相手検索</a> ・ <a href="mail.html">メッセージ</a> ・ <a href="favorite.html">いいね</a> ・
+      <a href="diary.html">日記</a> ・ <a href="menu-profile.html">プロフィール</a> ・ <a href="payment.html">ポイント購入</a> ・
+      <a href="pointget.html">ポイントゲット</a> ・ <a href="setting.html">各種設定</a> ・ <a href="system.html">システム・料金</a> ・ <a href="contact.html">お問合せ</a>
+    </p>
   </div>
-
-  <nav class="top_menu">
-    <ul>
-      <li>
-        <a href="search.html">
-          <i class="bi bi-search"></i>
-          <span>さがす</span>
-        </a>
-      </li>
-      <li class="notice">
-        <a href="mail.html">
-          <i class="bi bi-chat-dots"></i>
-          <span>メッセージ</span>
-        </a>
-        <div class="dot"></div>
-      </li>
-      <li>
-        <a href="favorite.html">
-          <i class="bi bi-heart"></i>
-          <span>いいね</span>
-        </a>
-      </li>
-      <li>
-        <a href="diary.html">
-          <i class="bi bi-calendar3"></i>
-          <span>日記</span>
-        </a>
-      </li>
-      <li>
-        <a href="payment.html">
-          <i class="bi bi-p-circle"></i>
-          <span>ポイント</span>
-        </a>
-      </li>
-      <li>
-        <a id="open-menu">
-          <i class="bi bi-list"></i>
-          <span>メニュー</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <div id="mask"></div>
-
-  <nav class="overlay_menu">
-    <h1>MENU</h1>
-    <ul>
-      <li>
-        <a href="menu-profile.html">プロフィール</a>
-      </li>
-      <li>
-        <a href="setting.html">各種設定</a>
-      </li>
-      <li>
-        <a href="autointro.html">お相手自動紹介</a>
-      </li>
-      <li>
-        <a href="payment.html">ポイント購入</a>
-      </li>
-      <li>
-        <a href="pointget.html">ポイントゲット</a>
-      </li>
-      <li>
-        <a href="system.html">システム・料金案内</a>
-      </li>
-      <li>
-        <a href="question.html">よくある質問</a>
-      </li>
-      <li>
-        <a href="contact.html">お問合せ</a>
-      </li>
-    </ul>
-  </nav>
-
-</header>
-
-<section class="search">
-  <div class="container">
-    <ul>
-      <li><a href="senior_home01.html">【シニア向けの案】ホーム → 今やること</a></li>
-      <li><a href="senior_home02.html">【シニア向けの案】ホーム → 今やること → やることが無いとき</a></li>
-      <li><a href="senior_font01.html">【シニア向けの案】文字の大きさ → 選ぶ</a></li>
-      <li><a href="senior_font02.html">【シニア向けの案】文字の大きさ → 「大」にしたとき</a></li>
-      <li><a href="senior_template01.html">【シニア向けの案】申込みメール → 文例から選ぶ</a></li>
-      <li><a href="senior_template02.html">【シニア向けの案】申込みメール → 文例を選んだあと</a></li>
-      <li><a href="before_entrance.html">登録前のボタンクリック</a></li>
-      <li><a href="entrance.html">会員登録</a></li>
-      <li><a href="entrance_email.html">メールアドレスで会員登録</a></li>
-      <li><a href="pre_entrance_finish.html">メールアドレス仮登録完了</a></li>
-      <li><a href="entrance_phone.html">電話番号で会員登録</a></li>
-      <li><a href="entrance_phone01.html">電話番号認証</a></li>
-      <li><a href="entrance_phone02.html">電話番号認証 → 完了(電話番号で仮登録完了)</a></li>
-      <li><a href="pre_registration01.html">仮登録01 (項目少ない)</a></li>
-      <li><a href="pre_registration02.html">仮登録02 (生年月日)</a></li>
-      <li><a href="pre_registration03.html">仮登録03 (ニックネーム)</a></li>
-      <li><a href="pre_registration04.html">仮登録04 (項目多い)</a></li>
-      <li><a href="pre_registration05.html">仮登録05 (趣味)</a></li>
-      <li><a href="pre_registration06.html">仮登録06 (プロフィール)</a></li>
-      <!-- <li><a href="pre_registration07.html">仮登録07 (求める関係)</a></li> -->
-      <li><a href="login.html">ログイン</a></li>
-      <li><a href="login_email.html">メールアドレスでログイン</a></li>
-      <li><a href="login_email_error.html">メールアドレスでログイン → エラー</a></li>
-      <li><a href="login_phone.html">電話番号でログイン</a></li>
-      <li><a href="login_phone_error.html">メールアドレスでログイン → エラー</a></li>
-      <li><a href="pasward.html">パスワード忘れた方</a></li>
-      <li><a href="communicate01.html">アプローチメール</a></li>
-      <li><a href="communicate02.html">申込みメール</a></li>
-      <li><a href="communicate03.html">アプローチメール → 申込みメール</a></li>
-      <li><a href="communicate04.html">申込みメール → OK返事</a></li>
-      <li><a href="communicate05.html">お断りメール</a></li>
-      <li><a href="communicate06.html">各種メール 送信済み</a></li>
-      <li><a href="communicate07.html">各種メール プロフィールから開いた時</a></li>
-      <li><a href="communicate08.html">アプローチメール → エラー時</a></li>
-      <li><a href="communicate09.html">申込みメール → エラー時</a></li>
-      <li><a href="communicate10.html">OK返事メール → エラー時</a></li>
-      <li><a href="profile_male.html">プロフィール 男性</a></li>
-      <li><a href="profile_female.html">プロフィール 女性</a></li>
-      <li><a href="profile_01.html">プロフィール → アプローチ済み</a></li>
-      <li><a href="profile_02.html">プロフィール → アプローチメール受信</a></li>
-      <li><a href="profile_03.html">プロフィール → 申込み済み</a></li>
-      <li><a href="profile_04.html">プロフィール → 申込み受信</a></li>
-      <li><a href="profile_05.html">プロフィール → OK返事済み</a></li>
-      <li><a href="profile_06.html">プロフィール → OK返事済み → 時間経過</a></li>
-      <li><a href="profile_06_1.html">プロフィール → OK返事済み → 時間経過 → クリック</a></li>
-      <li><a href="profile_07.html">プロフィール → OK返事受信 → ポイントなし</a></li>
-      <li><a href="profile_08.html">プロフィール → OK返事受信 → ポイントあり</a></li>
-      <li><a href="profile_09.html">プロフィール → OK返事済み → 年齢認証</a></li>
-      <li><a href="profile_10.html">プロフィール → OK返事受信 → 年齢認証</a></li>
-      <li><a href="profile_11.html">プロフィール → OK返事受信 → 年齢認証待ち</a></li>
-      <li><a href="profile_12.html">プロフィール → お断り受信</a></li>
-      <li><a href="profile_13.html">プロフィール → メール開通済み → サイトメール</a></li>
-      <!-- <li><a href="profile_14.html">プロフィール → メール開通済み → 直アド</a></li> -->
-      <li><a href="profile_15.html">プロフィール → メール開通済み → 停止している</a></li>
-      <li><a href="profile_16.html">プロフィール → メール開通済み → 停止された</a></li>
-      <li><a href="profile_17.html">プロフィール → メール開通済み → 停止時</a></li>
-      <li><a href="profile_18.html">プロフィール → ブロックする</a></li>
-      <li><a href="profile_19.html">プロフィール → ブロックした</a></li>
-      <li><a href="profile_20.html">プロフィール → いいねを連続</a></li>
-      <li><a href="profile_21.html">プロフィール → いいね 済み</a></li>
-      <li><a href="sitemail01.html">サイトメール → スタート</a></li>
-      <li><a href="sitemail02.html">サイトメール → 削除する</a></li>
-      <li><a href="sitemail03.html">サイトメール → 再開</a></li>
-      <li><a href="sitemail04.html">サイトメール → メニュー</a></li>
-      <li><a href="sitemail05.html">サイトメール → メニュー → 申請された</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer>
-  <nav>
-    <ul>
-      <li>
-        <a href="search.html">
-          <span>お相手検索</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="mail.html">
-          <span>メッセージ</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="favorite.html">
-          <span>いいね <i class="bi bi-heart"></i></span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <!-- <li>
-        <a href="circle.html">
-          <span>サークル</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li> -->
-      <li>
-        <a href="diary.html">
-          <span>日記</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="menu-profile.html">
-          <span>プロフィール</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="setting.html">
-          <span>各種設定</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="autointro.html">
-          <span>お相手自動紹介</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="payment.html">
-          <span>ポイント購入</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="pointget.html">
-          <span>ポイントゲット</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="system.html">
-          <span>システム・料金案内</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="question.html">
-          <span>よくある質問</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="contact.html">
-          <span>お問合せ</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="system_termsofuse.html">
-          <span>利用規約</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="system_privacypolicy.html">
-          <span>プライバシーポリシー</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="system_tokusho.html">
-          <span>特定商取引に基づく表示</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <a href="system_company.html">
-          <span>会社案内</span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <section class="tel">
-    <p>お電話でのお問合せ　0120-974-604</p>
-    <p>メールでのお問合せ　info@h-p.tv</p>
-  </section>
-  <img src="img/truste.png" alt="" width="179" height="57">
-  <small>
-    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
-    <p>インターネット異性紹介事業 認定番号 54080001000</p>
-    <p>Copyright © Happy Land All rights reserved.</p>
-  </small>
-</footer>
-
-<script src="js/main.js"></script>
+  <script src="js/catalog-data.js"></script>
+  <script src="js/catalog.js"></script>
 </body>
 </html>
