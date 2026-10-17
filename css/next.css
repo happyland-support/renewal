@@ -1,0 +1,183 @@
+/* 次のリニューアル（2回目）の案。styles.css のあとに読む。ここに書いたものが、新しく足した見た目 */
+
+/* マイページ：自分のカード */
+
+.mypage .me {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.mypage .me img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mypage .me .who {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.mypage .me .who strong {
+  font-size: 20px;
+}
+
+.mypage .me .who .sub {
+  color: #555;
+  font-size: 14px;
+}
+
+.mypage .me .badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  background-color: var(--base_color);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.mypage .point_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: var(--main_button_background_color);
+  font-weight: bold;
+}
+
+.mypage .point_line span:last-child {
+  color: var(--main_button_color);
+  font-size: 20px;
+}
+
+/* 新着の数 */
+
+.new_count {
+  display: inline-block;
+  min-width: 22px;
+  padding: 1px 7px;
+  border-radius: 12px;
+  background-color: var(--caution_color);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 案A：大きなボタン */
+
+.mypage_tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.mypage_tiles a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 120px;
+  padding: 12px 8px;
+  border: 2px solid var(--base_light_color);
+  border-radius: 12px;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mypage_tiles a i {
+  font-size: 36px;
+  color: var(--base_color);
+}
+
+.mypage_tiles a.wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  min-height: 80px;
+}
+
+.mypage_tiles a.wide i {
+  font-size: 30px;
+}
+
+.mypage_tiles a .new_count {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.mypage_tiles a .hint {
+  color: #666;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.mypage_tiles a.like i {
+  color: var(--main_button_color);
+}
+
+/* 案B：一覧 */
+
+.mypage_list a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 4px;
+  color: #333;
+}
+
+.mypage_list li + li a {
+  border-top: 1px solid #ddd;
+}
+
+.mypage_list .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #eefaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--base_color);
+  flex-shrink: 0;
+}
+
+.mypage_list .icon.like {
+  background-color: var(--main_button_background_color);
+  color: var(--main_button_color);
+}
+
+.mypage_list .text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.mypage_list .text strong {
+  font-size: 18px;
+}
+
+.mypage_list .text .hint {
+  display: block;
+  color: #666;
+  font-size: 14px;
+}
+
+.mypage_list .bi-chevron-right {
+  color: #999;
+  font-size: 18px;
+}
