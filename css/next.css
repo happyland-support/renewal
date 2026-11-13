@@ -181,3 +181,284 @@
   color: #999;
   font-size: 18px;
 }
+
+/* マイページ：5つ目のボタン（ポイントの履歴）の色 */
+
+.mypage_tiles a.point i {
+  color: #e0a100;
+}
+
+/* マイページの下の画面：上の「← マイページ」 */
+
+.back_to_mypage {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 4px 0 12px;
+  color: var(--base_dark_color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.page_lead {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 足あと：写真つきの一覧 */
+
+.day_label {
+  margin: 18px 0 8px;
+  color: #555;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.person_list li + li {
+  margin-top: 10px;
+}
+
+.person_list a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #333;
+}
+
+.person_list a.is_new {
+  border: 2px solid var(--main_button_light_color);
+}
+
+.person_list img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.person_list .text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.person_list .text strong {
+  font-size: 18px;
+}
+
+.person_list .text .sub {
+  display: block;
+  color: #666;
+  font-size: 14px;
+}
+
+.person_list .new_mark {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background-color: var(--caution_color);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: 2px;
+}
+
+.person_list .bi-chevron-right {
+  color: #999;
+  font-size: 18px;
+}
+
+/* 自分の日記 */
+
+.write_diary_btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: var(--main_button_color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.my_diary_list li + li {
+  margin-top: 12px;
+}
+
+.my_diary_list .card {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.my_diary_list .card_top {
+  display: flex;
+  gap: 12px;
+  color: #333;
+}
+
+.my_diary_list .card_top img {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.my_diary_list .card_top .text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.6;
+}
+
+.my_diary_list .date {
+  color: #666;
+  font-size: 14px;
+}
+
+.my_diary_list .body {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.my_diary_list .card_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.my_diary_list .likes {
+  color: var(--main_button_color);
+  font-weight: bold;
+}
+
+.my_diary_list .edit_link {
+  padding: 6px 14px;
+  border: 1px solid var(--base_dark_color);
+  border-radius: 8px;
+  color: var(--base_dark_color);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* ポイントの履歴 */
+
+.point_now {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.point_now .num {
+  color: var(--main_button_color);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.point_now a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: var(--main_button_color);
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.month_tabs {
+  display: flex;
+  gap: 8px;
+  margin: 4px 0 12px;
+}
+
+.month_tabs span {
+  flex: 1;
+  padding: 8px 0;
+  border: 1px solid var(--base_dark_color);
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--base_dark_color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.month_tabs span.active {
+  background-color: var(--base_dark_color);
+  color: #fff;
+}
+
+.history_list {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.history_list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.history_list li + li {
+  border-top: 1px solid #eee;
+}
+
+.history_list .what {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+.history_list .what .sub {
+  display: block;
+  color: #777;
+  font-size: 13px;
+}
+
+.history_list .tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background-color: #fff3cd;
+  color: #8a6100;
+  font-size: 12px;
+  vertical-align: 1px;
+}
+
+.history_list .amount {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.history_list .plus {
+  color: #2e8b57;
+}
+
+.history_list .minus {
+  color: #d2404d;
+}

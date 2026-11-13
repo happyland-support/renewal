@@ -4,6 +4,16 @@
 window.CATALOG = {
   cats: [
     {
+      key: "next", name: "2回目のリニューアルの案（マイページ）",
+      items: [
+        { file: "next_mypage_a.html", label: "マイページ（案A：大きなボタン。決定）" },
+        { file: "next_mypage_footprint.html", label: "マイページ → 足あと" },
+        { file: "next_mypage_diary.html", label: "マイページ → 自分の日記" },
+        { file: "next_mypage_point.html", label: "マイページ → ポイントの履歴" },
+        { file: "next_mypage_b.html", label: "マイページ（案B：一覧。比べる用）" },
+      ],
+    },
+    {
       key: "senior", name: "シニア向けの案（2026-10）",
       items: [
         { file: "senior_home01.html", label: "ホーム → 今やること" },

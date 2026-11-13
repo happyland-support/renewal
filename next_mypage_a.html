@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/senior.css">
     <link rel="stylesheet" href="css/next.css">
-  <title>検索ページ</title>
+  <title>マイページ</title>
 </head>
 <body>
 
@@ -98,8 +98,8 @@
 </header>
   <section class="mypage">
     <div class="container">
-      <div class="note_for_maker"><h1>【制作会社さまへ】マイページ（案A：大きなボタン）</h1><ul><li>次のリニューアル（2回目）の案。メニューに「マイページ」を足し、自分のことは全部ここから行けるようにする。</li><li>上に、自分の写真・名前・年齢・会員ID・年齢認証・残りポイントを出す。</li><li>ボタンは3つ：<b>足あと</b>（自分のプロフィールを見に来た人の一覧。新しい人の数を赤で出す）／<b>いいね</b>（もらった・した）／<b>プロフの確認・編集</b>。</li><li>案A：ボタンを大きなマスで並べる。押す所が大きく、シニアでも押しやすい。新着の数は、マスの右上に赤い丸で出す。</li></ul></div>
-      
+      <div class="note_for_maker"><h1>【制作会社さまへ】マイページ（案A：大きなボタン）</h1><ul><li>次のリニューアル（2回目）の案。メニューに「マイページ」を足し、自分のことは全部ここから行けるようにする。</li><li>上に、自分の写真・名前・年齢・会員ID・年齢認証・残りポイントを出す。</li><li>ボタンは5つ：<b>足あと</b>（新しい機能）／<b>いいね</b>（もらった・した。今の画面）／<b>自分の日記</b>（新しい一覧）／<b>ポイントの履歴</b>（今はポイント購入のタブの中。ここからも直接開く）／<b>プロフの確認・編集</b>（今の画面）。</li><li>ボタンを大きなマスで並べる。押す所が大きく、シニアでも押しやすい。新着の数は、マスの右上に赤い丸で出す（足あと・いいねだけ。その画面を開いたら消える）。</li></ul></div>
+
       <section class="base_section_style">
         <div class="me">
           <img src="img/photo04.png" alt="">
@@ -115,9 +115,11 @@
       <section class="base_section_style">
         <h2>マイページ</h2>
         <div class="mypage_tiles">
-          <a href="#"><span class="new_count">3</span><i class="bi bi-person-walking"></i>足あと<span class="hint">見に来た人</span></a>
-          <a href="#" class="like"><span class="new_count">2</span><i class="bi bi-heart-fill"></i>いいね<span class="hint">もらった・した</span></a>
-          <a href="#" class="wide"><i class="bi bi-person-vcard"></i>プロフの確認・編集</a>
+          <a href="next_mypage_footprint.html"><span class="new_count">3</span><i class="bi bi-person-walking"></i>足あと<span class="hint">見に来た人</span></a>
+          <a href="favorite_02.html" class="like"><span class="new_count">2</span><i class="bi bi-heart-fill"></i>いいね<span class="hint">もらった・した</span></a>
+          <a href="next_mypage_diary.html"><i class="bi bi-journal-text"></i>自分の日記<span class="hint">書いた日記</span></a>
+          <a href="next_mypage_point.html" class="point"><i class="bi bi-p-circle-fill"></i>ポイントの履歴<span class="hint">使った・もらった</span></a>
+          <a href="menu-profile.html" class="wide"><i class="bi bi-person-vcard"></i>プロフの確認・編集</a>
         </div>
       </section>
     </div>
