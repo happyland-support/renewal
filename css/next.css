@@ -462,3 +462,40 @@
 .history_list .minus {
   color: #d2404d;
 }
+
+/* メニュー（さがす・メッセージ…）を、画面の下に固定する（2回目の案） */
+
+.top_menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, .08);
+}
+
+.top_menu li {
+  border-bottom: none;
+}
+
+body {
+  padding-bottom: calc(61px + env(safe-area-inset-bottom, 0px));
+}
+
+/* 見本ナビ（前・次・目次）は、下のメニューの上に出す */
+
+body #mihon-nav {
+  bottom: calc(69px + env(safe-area-inset-bottom, 0px));
+}
+
+html body.mihon-nav-pad {
+  padding-bottom: calc(133px + env(safe-area-inset-bottom, 0px));
+}
+
+/* 制作会社さまへの説明は、いったん出さない（文は HTML に残してある。戻すときは、この3行を消す） */
+
+.note_for_maker {
+  display: none;
+}
