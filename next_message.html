@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/senior.css">
+    <link rel="stylesheet" href="css/next.css">
+  <title>メッセージ</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="next_mypage_a.html">
+          <i class="bi bi-house-door"></i>
+          <span>ホーム</span>
+        </a>
+      </li>
+      <li>
+        <a href="next_search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li class="notice current">
+        <a href="next_message.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+        <div class="dot"></div>
+      </li>
+      <li>
+        <a href="next_board.html">
+          <i class="bi bi-clipboard"></i>
+          <span>掲示板</span>
+        </a>
+      </li>
+      <li>
+        <a href="next_point.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-three-dots"></i>
+          <span>その他</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+  <section class="mypage">
+    <div class="container">
+      <div class="note_for_maker"><h1>【制作会社さまへ】メッセージ（メッセージがきている人の一覧）</h1><ul><li>下のメニューの「メッセージ」を押すと、この画面を出す。今の「受信メール／送信メール」の件数の一覧の代わりに、<b>メッセージがきている人を、新しい順に1人1行</b>で並べる。</li><li>上のタブ（アプローチ／申込み／OK返事／開通済み）で、状態ごとに切り替える。まだ読んでいないメッセージがある状態は、タブに赤い丸の数を出す。</li><li>1行に出すもの：写真・名前（年齢）・最後のメッセージの出だし（1行）・日時。行は、区切り線だけで分ける。</li><li>まだ読んでいない人は、名前と文を太字にし、右に赤い丸の数。読んだら消える（下のメニューの赤い点も、全部読んだら消える）。</li><li>行を押すと、その人とのやりとり（今のプロフィール＋メッセージの画面）へ。</li></ul></div>
+      <section class="base_section_style">
+        <h2>メッセージ</h2>
+        <ul class="tabs state_tabs">
+          <li><a href="#" data-id="msg_approach" class="active">アプローチ</a></li>
+          <li><a href="#" data-id="msg_apply">申込み<span class="new_count">1</span></a></li>
+          <li><a href="#" data-id="msg_ok">OK返事<span class="new_count">1</span></a></li>
+          <li><a href="#" data-id="msg_open">開通済み<span class="new_count">2</span></a></li>
+        </ul>
+        <div class="point message_panel active" id="msg_approach">
+          <ul class="message_list">
+            <li><a href="profile_02.html"><img src="img/photo05.png" alt="">
+              <span class="text"><strong>さちこ</strong>（63歳）<span class="sub">旅行がお好きなんですね。私も温泉が好きで…</span></span>
+              <span class="side"><time>11月10日</time></span></a></li>
+            <li><a href="profile_02.html"><img src="img/photo01.png" alt="">
+              <span class="text"><strong>のりこ</strong>（66歳）<span class="sub">はじめまして。同じ愛知県ですね。</span></span>
+              <span class="side"><time>11月5日</time></span></a></li>
+          </ul>
+        </div>
+        <div class="point message_panel" id="msg_apply">
+          <ul class="message_list">
+            <li><a href="profile_04.html" class="is_new"><img src="img/photo02.png" alt="">
+              <span class="text"><strong>けいこ</strong>（61歳）<span class="sub">はじめまして。プロフィールを拝見して…</span></span>
+              <span class="side"><time>18:40</time><span class="new_count">1</span></span></a></li>
+            <li><a href="profile_04.html"><img src="img/photo03.png" alt="">
+              <span class="text"><strong>かずこ</strong>（57歳）<span class="sub">よろしければ、お話ししてみませんか。</span></span>
+              <span class="side"><time>11月9日</time></span></a></li>
+          </ul>
+        </div>
+        <div class="point message_panel" id="msg_ok">
+          <ul class="message_list">
+            <li><a href="profile_08.html" class="is_new"><img src="img/photo03.png" alt="">
+              <span class="text"><strong>まさみ</strong>（55歳）<span class="sub">お申込みありがとうございます。ぜひ…</span></span>
+              <span class="side"><time>昨日</time><span class="new_count">1</span></span></a></li>
+          </ul>
+        </div>
+        <div class="point message_panel" id="msg_open">
+          <ul class="message_list">
+            <li><a href="next_message_talk.html" class="is_new"><img src="img/photo01.png" alt="">
+              <span class="text"><strong>ゆみこ</strong>（58歳）<span class="sub">明日は何時ごろがご都合よいですか？</span></span>
+              <span class="side"><time>20:15</time><span class="new_count">2</span></span></a></li>
+            <li><a href="next_message_talk.html"><img src="img/photo02.png" alt="">
+              <span class="text"><strong>ひろこ</strong>（59歳）<span class="sub">こちらこそ、楽しかったです。また…</span></span>
+              <span class="side"><time>11月8日</time></span></a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_termsofuse.html">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_privacypolicy.html">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_tokusho.html">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_company.html">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/catalog-data.js"></script>
+<script src="js/mihon-nav.js"></script>
+</body>
+</html>

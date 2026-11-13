@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/senior.css">
+    <link rel="stylesheet" href="css/next.css">
+  <title>クレジットカードで買う</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="next_mypage_a.html">
+          <i class="bi bi-house-door"></i>
+          <span>ホーム</span>
+        </a>
+      </li>
+      <li>
+        <a href="next_search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li class="notice">
+        <a href="next_message.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+        <div class="dot"></div>
+      </li>
+      <li>
+        <a href="next_board.html">
+          <i class="bi bi-clipboard"></i>
+          <span>掲示板</span>
+        </a>
+      </li>
+      <li class="current">
+        <a href="next_point.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-three-dots"></i>
+          <span>その他</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+  <section class="payment">
+    <div class="container">
+      <div class="note_for_maker"><h1>【制作会社さまへ】ポイント → クレジットカードで買う</h1><ul><li>ポイントの画面で決済の方法を選ぶと、その方法の画面だけを出す（今は、3つの決済が1つの画面に縦に並んでいる）。</li><li>中身（金額の選び方・説明・ボタン）は、今の画面と同じ。上に、いま持っているポイントを出す。</li></ul></div>
+      <a class="back_to_mypage" href="next_point.html"><i class="bi bi-chevron-left"></i>ポイント</a>
+      <section class="base_section_style">
+        <div class="point_now"><div><span>いま持っているポイント</span><br><span class="num">450P</span></div></div>
+      </section>
+
+      <section class="base_section_style">
+        <h2>クレジット決済</h2>
+        <p>以下のカードがご利用いただけます。</p>
+        <div class="pic">
+          <img src="img/cc_img.png" alt="" width="300" height="37">
+        </div>
+        <div class="select">
+          <select name="" id="">
+            <option value="1,500">1,500円 = 150p</option>
+            <option value="2,000">2,000円 = 200P</option>
+            <option value="3,000">3,000円 = 300P</option>
+            <option value="5,000">5,000円 = 600P</option>
+            <option value="8,000">8,000円 = 960P</option>
+            <option value="10,000">10,000円 = 1,300P</option>
+            <option value="15,000">15,000円 = 1,950P</option>
+            <option value="20,000">20,000円 = 2,700P</option>
+            <option value="25,000">25,000円 = 3,400P</option>
+            <option value="30,000">30,000円 = 4,100P</option>
+            <option value="50,000">50,000円 = 6,850P</option>
+          </select>
+        </div>
+        <div class="btn_center">
+          <button class="main_btn">購入する</button>
+        </div>
+      </section>
+    </div>
+  </section>
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_termsofuse.html">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_privacypolicy.html">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_tokusho.html">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_company.html">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/catalog-data.js"></script>
+<script src="js/mihon-nav.js"></script>
+</body>
+</html>

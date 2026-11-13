@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" contes="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/senior.css">
+    <link rel="stylesheet" href="css/next.css">
+  <title>日記・掲示板</title>
+</head>
+<body>
+
+<header>
+
+  <div class="header_name">
+    <a href="index.html">
+      <h1>ハッピーランド</h1>
+    </a>
+    <span class="account-icon">M000000 あきら様</span>
+  </div>
+
+  <nav class="top_menu">
+    <ul>
+      <li>
+        <a href="next_mypage_a.html">
+          <i class="bi bi-house-door"></i>
+          <span>ホーム</span>
+        </a>
+      </li>
+      <li>
+        <a href="next_search.html">
+          <i class="bi bi-search"></i>
+          <span>さがす</span>
+        </a>
+      </li>
+      <li class="notice">
+        <a href="next_message.html">
+          <i class="bi bi-chat-dots"></i>
+          <span>メッセージ</span>
+        </a>
+        <div class="dot"></div>
+      </li>
+      <li class="current">
+        <a href="next_board.html">
+          <i class="bi bi-clipboard"></i>
+          <span>掲示板</span>
+        </a>
+      </li>
+      <li>
+        <a href="next_point.html">
+          <i class="bi bi-p-circle"></i>
+          <span>ポイント</span>
+        </a>
+      </li>
+      <li>
+        <a id="open-menu">
+          <i class="bi bi-three-dots"></i>
+          <span>その他</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mask"></div>
+
+  <nav class="overlay_menu">
+    <h1>MENU</h1>
+    <ul>
+      <li>
+        <a href="menu-profile.html">プロフィール</a>
+      </li>
+      <li>
+        <a href="setting.html">各種設定</a>
+      </li>
+      <li>
+        <a href="autointro.html">お相手自動紹介</a>
+      </li>
+      <li>
+        <a href="payment.html">ポイント購入</a>
+      </li>
+      <li>
+        <a href="pointget.html">ポイントゲット</a>
+      </li>
+      <li>
+        <a href="system.html">システム・料金案内</a>
+      </li>
+      <li>
+        <a href="question.html">よくある質問</a>
+      </li>
+      <li>
+        <a href="contact.html">お問合せ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+  <section class="mypage">
+    <div class="container">
+      <div class="note_for_maker"><h1>【制作会社さまへ】掲示板（日記と掲示板の一覧）※形は仮。資料が届いたら直す</h1><ul><li>下のメニューの「掲示板」を押すと、この画面。上のタブで「日記」と「掲示板」を切り替える。</li><li>日記：みんなの日記を新しい順に。写真・名前（年齢）・日付・本文の出だし・いいねの数。右上の「書く」で、日記を書く画面へ。</li><li>掲示板（新しい機能）：話題ごとの書き込み。分類の札（お茶・食事／趣味／おでかけ／雑談）・題名・書いた人・日時・返事の数。押すと、その話題の中身と返事の一覧へ。</li><li>連絡先を書くのは禁止（日記・掲示板とも）。</li></ul></div>
+      <section class="base_section_style">
+        <div class="title_row"><h2>日記・掲示板</h2><a class="write_btn" href="diary05.html"><i class="bi bi-pencil"></i>書く</a></div>
+        <ul class="tabs state_tabs">
+          <li><a href="#" data-id="board_diary" class="active">日記</a></li>
+          <li><a href="#" data-id="board_board">掲示板</a></li>
+        </ul>
+        <div class="point message_panel active" id="board_diary">
+          <ul class="message_list feed_list">
+            <li><a href="diary09.html"><img src="img/photo01.png" alt="">
+              <span class="text"><strong>ゆみこ</strong>（58歳）<span class="when">11月12日</span><span class="body">今日は久しぶりに名古屋港まで散歩に行きました。風が気持ちよくて、帰りに喫茶店でモーニングを食べました。</span><img class="pic" src="img/image01.jpg" alt=""><span class="likes"><i class="bi bi-heart-fill"></i> いいね 12</span></span></a></li>
+            <li><a href="diary09.html"><img src="img/photo04.png" alt="">
+              <span class="text"><strong>たかし</strong>（64歳）<span class="when">11月12日</span><span class="body">家庭菜園の大根がようやく太くなってきました。今年はおでんにします。</span><span class="likes"><i class="bi bi-heart-fill"></i> いいね 7</span></span></a></li>
+            <li><a href="diary09.html"><img src="img/photo03.png" alt="">
+              <span class="text"><strong>まさみ</strong>（55歳）<span class="when">11月11日</span><span class="body">紅葉を見に香嵐渓へ。人が多かったけれど、きれいでした。</span><img class="pic" src="img/image01.jpg" alt=""><span class="likes"><i class="bi bi-heart-fill"></i> いいね 15</span></span></a></li>
+            <li><a href="diary09.html"><img src="img/photo05.png" alt="">
+              <span class="text"><strong>なおみ</strong>（63歳）<span class="when">11月10日</span><span class="body">孫が遊びに来てくれて、一緒にカレーを作りました。</span><span class="likes"><i class="bi bi-heart-fill"></i> いいね 9</span></span></a></li>
+          </ul>
+        </div>
+        <div class="point message_panel" id="board_board">
+          <ul class="message_list board_list">
+            <li><a href="#"><img src="img/photo02.png" alt="">
+              <span class="text"><span class="state_tag">お茶・食事</span><strong>週末に名古屋でお茶できる方</strong><span class="sub">けいこ（61歳）・岐阜県　今日 18:20</span></span>
+              <span class="side"><span class="reply"><i class="bi bi-chat"></i>3</span></span></a></li>
+            <li><a href="#"><img src="img/photo04.png" alt="">
+              <span class="text"><span class="state_tag">趣味</span><strong>カラオケ好きな方、お話ししませんか</strong><span class="sub">たかし（64歳）・愛知県　今日 9:05</span></span>
+              <span class="side"><span class="reply"><i class="bi bi-chat"></i>5</span></span></a></li>
+            <li><a href="#"><img src="img/photo02.png" alt="">
+              <span class="text"><span class="state_tag">おでかけ</span><strong>来月、日帰りで温泉に行ける方</strong><span class="sub">ひろこ（57歳）・静岡県　昨日</span></span>
+              <span class="side"><span class="reply"><i class="bi bi-chat"></i>2</span></span></a></li>
+            <li><a href="#"><img src="img/photo04.png" alt="">
+              <span class="text"><span class="state_tag">雑談</span><strong>おすすめの時代劇を教えてください</strong><span class="sub">よしお（68歳）・三重県　11月10日</span></span>
+              <span class="side"><span class="reply"><i class="bi bi-chat"></i>8</span></span></a></li>
+            <li><a href="#"><img src="img/photo05.png" alt="">
+              <span class="text"><span class="state_tag">お茶・食事</span><strong>モーニングのおいしいお店</strong><span class="sub">なおみ（63歳）・愛知県　11月9日</span></span>
+              <span class="side"><span class="reply"><i class="bi bi-chat"></i>6</span></span></a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="search.html">
+          <span>お相手検索</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mail.html">
+          <span>メッセージ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="favorite.html">
+          <span>いいね <i class="bi bi-heart"></i></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="circle.html">
+          <span>サークル</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li> -->
+      <li>
+        <a href="diary.html">
+          <span>日記</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="menu-profile.html">
+          <span>プロフィール</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <span>各種設定</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="autointro.html">
+          <span>お相手自動紹介</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="payment.html">
+          <span>ポイント購入</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="pointget.html">
+          <span>ポイントゲット</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system.html">
+          <span>システム・料金案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="question.html">
+          <span>よくある質問</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <span>お問合せ</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_termsofuse.html">
+          <span>利用規約</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_privacypolicy.html">
+          <span>プライバシーポリシー</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_tokusho.html">
+          <span>特定商取引に基づく表示</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="system_company.html">
+          <span>会社案内</span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="tel">
+    <p>お電話でのお問合せ　0120-974-604</p>
+    <p>メールでのお問合せ　info@h-p.tv</p>
+  </section>
+  <img src="img/truste.png" alt="" width="179" height="57">
+  <small>
+    <p>総務省 第二種電気通信事業 届出番号 C-20-1516</p>
+    <p>インターネット異性紹介事業 認定番号 54080001000</p>
+    <p>Copyright © Happy Land All rights reserved.</p>
+  </small>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/catalog-data.js"></script>
+<script src="js/mihon-nav.js"></script>
+</body>
+</html>
